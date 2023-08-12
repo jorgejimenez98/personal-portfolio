@@ -4,6 +4,7 @@ const HomePage: NextPage = ()  => {
   return (
     <div>
       Main Content Here...
+      <button className='btn'>Hello daisyUI</button>
     </div>
   )
 }
