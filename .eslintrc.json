@@ -1,3 +1,63 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+      "next",
+      "plugin:react/recommended",
+      "eslint:recommended",
+      "next/core-web-vitals"
+  ],
+  "rules": {
+      "indent": ["error", 2, { "SwitchCase": 1 }],
+      "camelcase": "off",
+      "no-console": ["error", { "allow": ["warn", "error"] }],
+      "react/jsx-one-expression-per-line": [0, { "allow": "single-child" }],
+      "complexity": ["error", 12],
+      "semi": [2, "never"],
+      "max-len": [
+          "error",
+          {
+              "code": 120,
+              "ignoreStrings": true,
+              "ignoreTemplateLiterals": true
+          }
+      ],
+      "key-spacing": [
+          "error",
+          { "beforeColon": false, "afterColon": true, "mode": "strict" }
+      ],
+      "react/jsx-no-duplicate-props": [2, { "ignoreCase": true }],
+      "quote-props": [
+        "error",
+        "as-needed",
+        { "keywords": true, "numbers": true, "unnecessary": false }
+      ],
+      "jsx-quotes": [
+        "error",
+        "prefer-single"
+      ]
+  },
+  "overrides": [
+      {
+          "files": ["*.tsx", "*.ts"],
+          "rules": {
+              "object-curly-spacing": ["error", "always"],
+              "key-spacing": [
+                  "error",
+                  {
+                      "beforeColon": false,
+                      "afterColon": true,
+                      "mode": "strict"
+                  }
+              ],
+              "semi": ["error", "never"],
+              "quotes": [
+                  "error",
+                  "single",
+                  {
+                      "avoidEscape": true,
+                      "allowTemplateLiterals": true
+                  }
+              ]
+          }
+      }
+  ]
 }

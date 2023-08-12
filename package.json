@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "eslint . --ext ts,.tsx --fix",
+    "postinstall": "husky install",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "20.4.9",
@@ -19,5 +22,8 @@
     "react-dom": "18.2.0",
     "sass": "^1.65.1",
     "typescript": "5.1.6"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix"
   }
 }
