@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import Image from 'next/image'
+
 import { LigthIcon } from '@/assets/icons'
 import styles from './change-theme.module.scss'
+import { UiContext } from '@/context/ui'
 
 const ChangeTheme: React.FC = () => {
+  const { selectedTheme, setAppTheme } = useContext(UiContext)
+  const [isChecked, setIsChecked] = useState<boolean>(selectedTheme === 'dark')
+
+
+  const handleThemeChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
+    const isChecked = event.target.checked
+    setAppTheme(isChecked ? 'dark' : 'ligth')
+    setIsChecked(isChecked)
+  }
+
   return (
     <label className={styles['theme-switch']}>
       <input
         type='checkbox'
+        onChange={handleThemeChange}
+        checked={isChecked}
         className={styles['theme-switch__checkbox']}
       />
       <div className={styles['theme-switch__container']}>
