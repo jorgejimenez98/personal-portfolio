@@ -1,3 +1,3 @@
-import TheHeader from './TheHeader/TheHeader'
+import TheHeader from './TheHeader/header.component'
 
 export { TheHeader }

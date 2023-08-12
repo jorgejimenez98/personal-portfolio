@@ -5,14 +5,14 @@ import styles from './MainLayout.module.scss'
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
-    <React.Fragment>
+    <div className={styles.appWidth}>
       <TheHeader />
 
       <main className={styles.content}>
         {children}
       </main>
 
-    </React.Fragment>
+    </div>
   )
 }
 
