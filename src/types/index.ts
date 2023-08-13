@@ -1,3 +1,4 @@
 export type {
-  AppTheme
+  AppTheme,
+  AppLanguage
 } from './ui.interfaces'

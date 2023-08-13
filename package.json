@@ -1,5 +1,8 @@
 {
   "name": "personal-portfolio",
+  "author": {
+    "name": "Jorge Jimenez"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -17,11 +20,17 @@
     "@types/react-dom": "18.2.7",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.13",
+    "i18next": "^23.4.4",
     "next": "13.4.13",
+    "next-i18next": "^14.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-i18next": "^13.1.2",
     "sass": "^1.65.1",
     "typescript": "5.1.6"
+  },
+  "resolutions": {
+    "react-i18next": ">=11.16.4"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --cache --fix"

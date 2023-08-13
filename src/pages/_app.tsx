@@ -1,9 +1,10 @@
 import '@/assets/scss/main.scss'
 import { UiProvider } from '@/context/ui'
 import { MainLayout } from '@/layouts'
+import { appWithTranslation } from 'next-i18next'
 import type { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <UiProvider>
       <MainLayout>
@@ -12,3 +13,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </UiProvider>
   )
 }
+
+export default appWithTranslation(MyApp)

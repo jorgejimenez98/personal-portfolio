@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { MenuIcon } from '@/assets/icons'
 import HeaderItemList from './HeaderItems/header-items.component'
 import ChangeTheme from '@/components/ChangeTheme/change-theme.component'
+import ChangeLanguage from '@/components/ChangeLanguage/change-language.component'
 
 const TheHeader: React.FC = () => {
 
@@ -32,6 +33,8 @@ const TheHeader: React.FC = () => {
             <HeaderItemList />
           </ul>
         </div>
+
+        <ChangeLanguage />
 
         <ChangeTheme />
       </div>

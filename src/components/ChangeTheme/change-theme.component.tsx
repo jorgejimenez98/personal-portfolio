@@ -1,19 +1,24 @@
 import React, { useState, useContext } from 'react'
 import Image from 'next/image'
-
-import { LigthIcon } from '@/assets/icons'
 import styles from './change-theme.module.scss'
+
+import { AppTheme } from '@/types'
+import { LigthIcon } from '@/assets/icons'
 import { UiContext } from '@/context/ui'
+import { useLocalStorage } from '@/hooks'
 
 const ChangeTheme: React.FC = () => {
   const { selectedTheme, setAppTheme } = useContext(UiContext)
   const [isChecked, setIsChecked] = useState<boolean>(selectedTheme === 'dark')
+  const { setValue: setLocalTheme } = useLocalStorage('theme')
 
 
   const handleThemeChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     const isChecked = event.target.checked
-    setAppTheme(isChecked ? 'dark' : 'ligth')
+    const newValue: AppTheme = isChecked ? 'dark' : 'ligth'
+    setAppTheme(newValue)
     setIsChecked(isChecked)
+    setLocalTheme(newValue)
   }
 
   return (

@@ -1,11 +1,13 @@
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 const HeaderItemList: React.FC = () => {
+  const { t } = useTranslation()
+
   const headerItems = [
-    { label: 'Projects' },
-    { label: 'Experience' },
-    { label: 'Social media' },
-    { label: 'Education' },
+    { label: t('Header.Projects') },
+    { label: t('Header.Experience') },
+    { label: t('Header.Education') },
   ]
 
   return headerItems.map((item, idx) => (
