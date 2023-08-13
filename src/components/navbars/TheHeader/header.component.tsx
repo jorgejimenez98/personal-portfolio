@@ -1,9 +1,11 @@
 import React from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import { MenuIcon } from '@/assets/icons'
 import HeaderItemList from './HeaderItems/header-items.component'
 import ChangeTheme from '@/components/ChangeTheme/change-theme.component'
 import ChangeLanguage from '@/components/ChangeLanguage/change-language.component'
+import CustomLogo from '@/components/CustomLogo/custom-logo.component'
 
 const TheHeader: React.FC = () => {
 
@@ -25,7 +27,9 @@ const TheHeader: React.FC = () => {
             <HeaderItemList />
           </ul>
         </div>
-        <a className='btn btn-ghost normal-case text-xl'>daisyUI</a>
+        <Link href={'/'}>
+          <CustomLogo text='Jorge Jiménez' />
+        </Link>
       </div>
       <div className='navbar-end'>
         <div className='hidden lg:flex'>
