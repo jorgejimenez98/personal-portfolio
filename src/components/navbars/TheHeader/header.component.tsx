@@ -1,13 +1,16 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+
 import { MenuIcon } from '@/assets/icons'
-import HeaderItemList from './HeaderItems/header-items.component'
-import ChangeTheme from '@/components/ChangeTheme/change-theme.component'
+import { useWindowSize } from '@/hooks'
 import ChangeLanguage from '@/components/ChangeLanguage/change-language.component'
+import ChangeTheme from '@/components/ChangeTheme/change-theme.component'
 import CustomLogo from '@/components/CustomLogo/custom-logo.component'
+import HeaderItemList from './HeaderItems/header-items.component'
 
 const TheHeader: React.FC = () => {
+  const { isMobile } = useWindowSize()
 
   return (
     <div className='navbar bg-base-100'>
@@ -28,7 +31,7 @@ const TheHeader: React.FC = () => {
           </ul>
         </div>
         <Link href={'/'}>
-          <CustomLogo text='Jorge Jiménez' />
+          <CustomLogo text={!isMobile ? 'Jorge Jiménez' : 'Jj'} />
         </Link>
       </div>
       <div className='navbar-end'>
