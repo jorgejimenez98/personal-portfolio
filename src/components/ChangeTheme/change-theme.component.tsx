@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import Image from 'next/image'
 import styles from './change-theme.module.scss'
 
@@ -11,6 +11,10 @@ const ChangeTheme: React.FC = () => {
   const { selectedTheme, setAppTheme } = useContext(UiContext)
   const [isChecked, setIsChecked] = useState<boolean>(selectedTheme === 'dark')
   const { setValue: setLocalTheme } = useLocalStorage('theme')
+
+  useEffect(() => {
+    setIsChecked(selectedTheme === 'dark')
+  }, [selectedTheme])
 
 
   const handleThemeChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
