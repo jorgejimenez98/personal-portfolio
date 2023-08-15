@@ -31,7 +31,7 @@ const TheHeader: React.FC = () => {
           </ul>
         </div>
         <Link href={'/'}>
-          <CustomLogo text={!isMobile ? 'Jorge Jiménez' : 'Jj'} />
+          <CustomLogo text={!isMobile ? 'Jorge Jimenez' : 'Jj'} />
         </Link>
       </div>
       <div className='navbar-end'>

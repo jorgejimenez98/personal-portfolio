@@ -1,4 +1,5 @@
-import React, { useContext } from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useContext, useEffect } from 'react'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
@@ -10,9 +11,16 @@ import { useLocalStorage } from '@/hooks'
 
 const ChangeLanguage: React.FC = () => {
   const { i18n } = useTranslation()
+  const { language: i18nLanguage } = i18n
   const router = useRouter()
   const { selectedLanguage, setAppLanguage } = useContext(UiContext)
   const { setValue: setLanguageValue } = useLocalStorage('language')
+
+  useEffect(() => {
+    if (selectedLanguage !== i18nLanguage) {
+      setAppLanguage(i18nLanguage as AppLanguage)
+    }
+  }, [i18nLanguage])
 
   const getFlagUrl = (countryCode: string): string => {
     return `https://flagsapi.com/${countryCode}/flat/64.png`
@@ -37,7 +45,7 @@ const ChangeLanguage: React.FC = () => {
         tabIndex={0}
         className={CLASSES.DROPDOWN_BTN}
       >
-        {selectedLanguage.toUpperCase()}
+        {selectedLanguage}
       </label>
       <ul
         tabIndex={0}
