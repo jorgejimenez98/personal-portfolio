@@ -5,7 +5,10 @@ const nextConfig = {
   i18n,
   reactStrictMode: true,
   images: {
-    domains: ['flagsapi.com'],
+    domains: [
+      'flagsapi.com',
+      'media.tenor.com'
+    ],
   },
   env: {
     FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,

@@ -1,11 +1,15 @@
 .appWidth {
-  padding: 10px 20px 0 10px;
-
 
   .content {
-    margin: 20px 40px 0 40px;
+    margin: 20px 80px 0 80px;
     // TODO: Delete this later
     height: 100vh;
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      margin: 20px 20px 0 20px;
+    }
   }
 }
 

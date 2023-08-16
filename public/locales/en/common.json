@@ -3,5 +3,9 @@
     "Education": "Education",
     "Projects": "Projects",
     "Experience": "Experience"
+  },
+  "Intro": {
+    "Hello": "Hi there folks, I am George",
+    "Description": "I am a Software Engineer with {{ years }} years of full-stack experience with Django and React, with the ability to develop web systems and android applications. I enjoy working as a team, I am self-motivated and proactive. I am fast learner, strong reasoning, problem solving skills, and skilled in creating clean, proven, and efficient code."
   }
 }
