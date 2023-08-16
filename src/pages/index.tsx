@@ -4,15 +4,13 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { CustomSeo } from '@/components'
 import { isLocal } from '@/lib/utils'
+import { MainPageContent } from '@/containers'
 
 const HomePage: NextPage = ()  => {
   return <>
     <CustomSeo title={'Jorge Jimenez Diaz'} />
 
-    <div>
-      Main Content Here...
-      <button className='btn'>Hello daisyUI</button>
-    </div>
+    <MainPageContent />
   </>
 }
 
