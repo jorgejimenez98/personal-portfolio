@@ -7,6 +7,7 @@ import { TheHeader } from '@/components/navbars'
 import styles from './MainLayout.module.scss'
 import { UiContext } from '@/context/ui'
 import { logEvent } from 'firebase/analytics'
+import { ScrollToTop } from '@/components'
 
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { selectedTheme } = useContext(UiContext)
@@ -22,6 +23,7 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     <div data-theme={selectedTheme}>
       <div className={styles.appWidth}>
         <TheHeader />
+        <ScrollToTop />
 
         <main className={styles.content}>
           {children}
