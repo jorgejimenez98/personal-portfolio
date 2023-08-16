@@ -8,12 +8,13 @@ import ChangeLanguage from '@/components/ChangeLanguage/change-language.componen
 import ChangeTheme from '@/components/ChangeTheme/change-theme.component'
 import CustomLogo from '@/components/CustomLogo/custom-logo.component'
 import HeaderItemList from './HeaderItems/header-items.component'
+import styles from './header.module.scss'
 
 const TheHeader: React.FC = () => {
   const { isMobile } = useWindowSize()
 
   return (
-    <div className='navbar bg-base-100'>
+    <nav className={`navbar ${styles.header}`}>
       <div className='navbar-start'>
         <div className='dropdown'>
           <label tabIndex={0} className='btn btn-ghost lg:hidden'>
@@ -45,7 +46,7 @@ const TheHeader: React.FC = () => {
 
         <ChangeTheme />
       </div>
-    </div>
+    </nav>
   )
 }
 

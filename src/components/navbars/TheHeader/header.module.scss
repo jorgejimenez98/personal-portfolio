@@ -1,0 +1,16 @@
+.header {
+  position: sticky;
+  top: 0px;
+  animation: adjust-header linear both;
+  animation-timeline: scroll();
+  animation-range: 0 200px;
+  border-radius: 10px;
+}
+
+@keyframes adjust-header {
+  to {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    height: 24px;
+  }
+}
