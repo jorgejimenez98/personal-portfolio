@@ -4,8 +4,9 @@ import { useTranslation } from 'next-i18next'
 
 import { TwoColumnLayout } from '@/layouts'
 import { useWindowSize } from '@/hooks'
+import { SocialMedia } from '@/types'
 
-const IntroductionContent: React.FC = () => {
+const IntroductionContent: React.FC<{ socialMedias: SocialMedia[] }> = ({ socialMedias }) => {
   const { t } = useTranslation()
   const { isMobile } = useWindowSize()
   const fullYears = new Date().getFullYear() - 2019
@@ -31,7 +32,7 @@ const IntroductionContent: React.FC = () => {
         </p>
 
         <div className='mt-4'>
-          Social media here...
+          Social media here...{socialMedias.length}
         </div>
       </Fragment>
 
