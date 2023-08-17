@@ -7,7 +7,8 @@ const nextConfig = {
   images: {
     domains: [
       'flagsapi.com',
-      'media.tenor.com'
+      'media.tenor.com',
+      'firebasestorage.googleapis.com'
     ],
   },
   env: {
