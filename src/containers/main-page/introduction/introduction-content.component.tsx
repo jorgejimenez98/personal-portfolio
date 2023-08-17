@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 import Image from 'next/image'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 
-import { useWindowSize } from '@/hooks'
 import { TwoColumnLayout } from '@/layouts'
+import { useWindowSize } from '@/hooks'
 
 const IntroductionContent: React.FC = () => {
   const { t } = useTranslation()
@@ -26,9 +26,13 @@ const IntroductionContent: React.FC = () => {
             />
           )}
         </div>
-        <p className='mt-5 text-gray-500 text-xl'>
+        <p className='mt-5 text-xl'>
           {t('Intro.Description', { years: fullYears })}
         </p>
+
+        <div className='mt-4'>
+          Social media here...
+        </div>
       </Fragment>
 
       <Fragment>
