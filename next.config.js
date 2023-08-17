@@ -10,7 +10,9 @@ const nextConfig = {
       'media.tenor.com'
     ],
   },
-  env: { }
+  env: {
+    MONGO_DB_CONNECTION: process.env.MONGO_DB_CONNECTION
+  }
 }
 
 module.exports = nextConfig

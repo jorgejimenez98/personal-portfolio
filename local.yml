@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  portfolio-db:
+    image: mongo:5.0.0
+    container_name: mongo-portfolio-database
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo:/data/db
