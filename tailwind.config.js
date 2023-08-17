@@ -13,13 +13,19 @@ module.exports = {
         'gradient-conic':
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      screens: {
+        xs: '480px',
+        sm: '800px',
+        '3xl': '1921px'
+      }
     },
+  },
+
+  daisyui: {
+    themes: ["light", "dark"],
   },
   plugins: [
     require('@tailwindcss/typography'),
     require('daisyui')
   ],
-  daisyui: {
-    themes: ["light", "dark"],
-  }
 }
