@@ -13,7 +13,7 @@ export const MainSkillsContent: React.FC<{ mainSkills: MainSkill[] }> = ({ mainS
       <Fragment>
         {/* Title */}
         <h1 className={global_classes.left_big_text}>
-          {t('Proficiency')}
+          {t('Skills.Title')}
         </h1>
 
         {/* List */}
