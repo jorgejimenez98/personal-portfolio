@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  portfolio-db:
+    image: mongo:5.0.0
+    container_name: mongo-portfolio-database
+    env_file:
+      - ./.env
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo:/data/db
+    networks:
+      portfolio-network:
+        aliases:
+          - portoflio-db-pro
+
+  next:
+    depends_on:
+      - portfolio-db
+    build:
+      context: .
+      dockerfile: ./compose/next/Dockerfile
+    networks:
+      portfolio-network:
+        aliases:
+          - next-portoflio
+    image: next_portfolio_image
+
+networks:
+  portfolio-network:
+    external:
+      name: portfolio-network
