@@ -1,13 +1,25 @@
-import { SocialMedia } from '@/types'
 import { db } from './db'
-import { SocialMediaModel } from './models'
+import { MainSkill, SocialMedia } from '@/types'
+import { SocialMediaModel, MainSkillModel } from './models'
+import mongoose from 'mongoose'
 
 class MongoDbService {
-  async getSocialMedias(): Promise<SocialMedia[]> {
+
+  async fetchData<T>(
+    model: mongoose.Model<T>,
+  ): Promise<T[]> {
     await db.connect()
-    const socialMedias = await SocialMediaModel.find({}, { __v: 0, _id: 0 }).lean()
+    const data = await model.find({}, { _id: 0, __v: 0 }).lean()
     await db.disconnect()
-    return JSON.parse(JSON.stringify(socialMedias)) as SocialMedia[]
+    return JSON.parse(JSON.stringify(data)) as T[] || []
+  }
+
+  async getSocialMedias(): Promise<SocialMedia[]> {
+    return this.fetchData<SocialMedia>(SocialMediaModel)
+  }
+
+  async getMainSkills(): Promise<MainSkill[]> {
+    return this.fetchData<MainSkill>(MainSkillModel)
   }
 }
 
