@@ -11,3 +11,7 @@ export type {
   SeedData,
   MainPageProps
 } from './data.interfaces'
+
+export type {
+  MainSkill
+} from './main-skill.interface'
