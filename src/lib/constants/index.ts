@@ -1,3 +1,3 @@
 export {
-  IMAGES
+  images
 } from './images.constans'

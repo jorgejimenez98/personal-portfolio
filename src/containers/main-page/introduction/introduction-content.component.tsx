@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 
 import { TwoColumnLayout } from '@/layouts'
 import { SocialMedia } from '@/types'
 import SocialMediaAccounts from '@/containers/social-media/social-media.component'
-import { IMAGES } from '@/lib/constants'
+import { images } from '@/lib/constants'
+import { classes } from './introduction-content.classes'
 
 const IntroductionContent: React.FC<{ socialMedias: SocialMedia[] }> = ({ socialMedias }) => {
   const { t } = useTranslation()
@@ -14,27 +16,43 @@ const IntroductionContent: React.FC<{ socialMedias: SocialMedia[] }> = ({ social
   return (
     <TwoColumnLayout>
       <Fragment>
-        <div className='flex items-center w-full bg-blend-color'>
-          <h1 className='mr-5 text-4xl text-center font-bold lg:text-7xl lg:text-start lg:mt-16'>
+
+        {/* Intro */}
+        <div className={classes.intro_content}>
+          <h1 className={classes.hello_message}>
             {t('Intro.Hello')}
           </h1>
         </div>
-        <p className='mt-5 text-xl text-center opacity-40 lg:text-start lg:mt-10 lg:text-3xl'>
+
+        {/* Description */}
+        <p className={classes.description_message}>
           {t('Intro.Description', { years: fullYears })}
         </p>
 
-        <div className='mt-5 lg:mt-8'>
+        {/* Social Media */}
+        <div className={classes.social_media}>
           <SocialMediaAccounts socialMedias={socialMedias} />
         </div>
+
+        {/* Resume */}
+        <div className={classes.resume_container}>
+          <Link href={images.resume} passHref target='_blank'>
+            <button className={classes.link_button}>
+              {t('Intro.ResumeLink')}
+            </button>
+          </Link>
+        </div>
+
       </Fragment>
 
       <Fragment>
-        <div className='flex justify-center'>
+        {/* Image */}
+        <div className={classes.image_container}>
           <Image
-            src={IMAGES.PROFILE}
+            src={images.profile}
             width={550}
             height={550}
-            className='mask mask-squircle shadow-md'
+            className={classes.image_mask}
             alt='main-image'
           />
         </div>
