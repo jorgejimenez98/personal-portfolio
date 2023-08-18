@@ -24,7 +24,7 @@ const ChangeLanguage: React.FC = () => {
 
   const handleChangeLanguage = async (languageCode: AppLanguage) => {
     if (selectedLanguage === languageCode) return
-    document.documentElement.setAttribute('language', languageCode)
+    document.documentElement.setAttribute('lang', languageCode)
     setLanguageValue(languageCode)
     await i18n.changeLanguage(selectedLanguage)
     router.push(router.asPath, undefined, { locale: languageCode })
