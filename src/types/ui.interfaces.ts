@@ -1,2 +1,2 @@
-export type AppTheme = 'ligth' | 'dark'
+export type AppTheme = 'cupcake' | 'dark'
 export type AppLanguage = 'en' | 'es'

@@ -22,7 +22,7 @@ module.exports = {
   },
 
   daisyui: {
-    themes: ["light", "dark"],
+    themes: ["cupcake", "dark"],
   },
   plugins: [
     require('@tailwindcss/typography'),

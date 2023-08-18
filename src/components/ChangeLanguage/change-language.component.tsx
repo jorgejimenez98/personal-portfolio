@@ -1,26 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useContext, useEffect } from 'react'
-import { useTranslation } from 'next-i18next'
+import React from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 
-import { UiContext } from '@/context/ui'
 import { AppLanguage } from '@/types'
 import { CLASSES } from './change-language.classes'
-import { useLocalStorage } from '@/hooks'
+import { useCookie } from '@/hooks'
+import { useTranslation } from 'react-i18next'
 
 const ChangeLanguage: React.FC = () => {
-  const { i18n } = useTranslation()
-  const { language: i18nLanguage } = i18n
   const router = useRouter()
-  const { selectedLanguage, setAppLanguage } = useContext(UiContext)
-  const { setValue: setLanguageValue } = useLocalStorage('language')
-
-  useEffect(() => {
-    if (selectedLanguage !== i18nLanguage) {
-      setAppLanguage(i18nLanguage as AppLanguage)
-    }
-  }, [i18nLanguage])
+  const { i18n } = useTranslation()
+  const { value: selectedLanguage, setValue: setLanguageValue } = useCookie('language')
 
   const getFlagUrl = (countryCode: string): string => {
     return `https://flagsapi.com/${countryCode}/flat/64.png`
@@ -33,9 +24,9 @@ const ChangeLanguage: React.FC = () => {
 
   const handleChangeLanguage = async (languageCode: AppLanguage) => {
     if (selectedLanguage === languageCode) return
+    document.documentElement.setAttribute('language', languageCode)
     setLanguageValue(languageCode)
-    setAppLanguage(languageCode)
-    await i18n.changeLanguage(languageCode)
+    await i18n.changeLanguage(selectedLanguage)
     router.push(router.asPath, undefined, { locale: languageCode })
   }
 

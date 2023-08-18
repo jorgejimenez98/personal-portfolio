@@ -1,23 +1,31 @@
-import React, { useContext } from 'react'
-import { TheHeader } from '@/components/navbars'
-import styles from './MainLayout.module.scss'
-import { UiContext } from '@/context/ui'
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+
 import { ScrollToTop } from '@/components'
+import { TheHeader } from '@/components/navbars'
+import { useCookie } from '@/hooks'
+import styles from './MainLayout.module.scss'
 
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { selectedTheme } = useContext(UiContext)
+  const { i18n } = useTranslation()
+  const { value: selectedLanguage } = useCookie('language')
+
+  useEffect(() => {
+    const changeLanguage = async () => {
+      await i18n.changeLanguage(selectedLanguage)
+    }
+    changeLanguage()
+  }, [selectedLanguage])
 
   return (
-    <div data-theme={selectedTheme}>
-      <div className={styles.appWidth}>
-        <TheHeader />
-        <ScrollToTop />
+    <div className={styles.appWidth}>
+      <TheHeader />
+      <ScrollToTop />
 
-        <main className={styles.content}>
-          {children}
-        </main>
-
-      </div>
+      <main className={styles.content}>
+        {children}
+      </main>
     </div>
   )
 }

@@ -1,28 +1,25 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styles from './change-theme.module.scss'
 
 import { AppTheme } from '@/types'
 import { LigthIcon } from '@/assets/icons'
-import { UiContext } from '@/context/ui'
-import { useLocalStorage } from '@/hooks'
+import { useCookie } from '@/hooks'
 
 const ChangeTheme: React.FC = () => {
-  const { selectedTheme, setAppTheme } = useContext(UiContext)
+  const { value: selectedTheme, setValue: setLocalTheme } = useCookie('theme')
   const [isChecked, setIsChecked] = useState<boolean>(selectedTheme === 'dark')
-  const { setValue: setLocalTheme } = useLocalStorage('theme')
 
   useEffect(() => {
     setIsChecked(selectedTheme === 'dark')
   }, [selectedTheme])
 
-
   const handleThemeChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     const isChecked = event.target.checked
-    const newValue: AppTheme = isChecked ? 'dark' : 'ligth'
-    setAppTheme(newValue)
+    const newValue: AppTheme = isChecked ? 'dark' : 'cupcake'
     setIsChecked(isChecked)
     setLocalTheme(newValue)
+    document.documentElement.setAttribute('data-theme', newValue)
   }
 
   return (
