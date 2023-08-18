@@ -8,7 +8,11 @@ const MainPageContent: React.FC<MainPageProps> = (props) => {
     const Component = section.component
     const props = section.props
 
-    return <Component {...props} key={idx}/>
+    return (
+      <div className='mt-10' key={idx}>
+        <Component {...props} />
+      </div>
+    )
   })
 }
 
