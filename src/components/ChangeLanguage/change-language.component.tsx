@@ -6,11 +6,12 @@ import Image from 'next/image'
 import { AppLanguage } from '@/types'
 import { CLASSES } from './change-language.classes'
 import { useCookie } from '@/hooks'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 
 const ChangeLanguage: React.FC = () => {
   const router = useRouter()
   const { i18n } = useTranslation()
+  const { language: i18nLanguage } = i18n
   const { value: selectedLanguage, setValue: setLanguageValue } = useCookie('language')
 
   const getFlagUrl = (countryCode: string): string => {
@@ -36,7 +37,7 @@ const ChangeLanguage: React.FC = () => {
         tabIndex={0}
         className={CLASSES.DROPDOWN_BTN}
       >
-        {selectedLanguage}
+        {i18nLanguage}
       </label>
       <ul
         tabIndex={0}
