@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { MainSkill } from '@/types'
 import { TwoColumnLayout } from '@/layouts'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 import { global_classes } from '@/lib/constants'
 
 export const MainSkillsContent: React.FC<{ mainSkills: MainSkill[] }> = ({ mainSkills }) => {
