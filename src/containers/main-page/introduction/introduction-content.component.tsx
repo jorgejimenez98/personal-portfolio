@@ -9,7 +9,7 @@ import SocialMediaAccounts from '@/containers/social-media/social-media.componen
 import { images } from '@/lib/constants'
 import { classes } from './introduction-content.classes'
 
-const IntroductionContent: React.FC<{ socialMedias: SocialMedia[] }> = ({ socialMedias }) => {
+export const IntroductionContent: React.FC<{ socialMedias: SocialMedia[] }> = ({ socialMedias }) => {
   const { t } = useTranslation()
   const fullYears = new Date().getFullYear() - 2019
 
@@ -60,5 +60,3 @@ const IntroductionContent: React.FC<{ socialMedias: SocialMedia[] }> = ({ social
     </TwoColumnLayout>
   )
 }
-
-export default IntroductionContent

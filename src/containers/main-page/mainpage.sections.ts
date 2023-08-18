@@ -1,11 +1,15 @@
 import { MainPageProps } from '@/types'
-import IntroductionContent from './introduction/introduction-content.component'
+import * as Components from './mainpage.imports'
 
 export const sections = (data: MainPageProps) => {
   return [
     {
-      component: IntroductionContent,
+      component: Components.IntroductionContent,
       props: { socialMedias: data.socialMedias }
-    }
+    },
+    {
+      component: Components.MainSkillsContent,
+      props: { mainSkills: data.mainSkills }
+    },
   ]
 }

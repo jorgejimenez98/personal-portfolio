@@ -14,18 +14,23 @@ const HomePage: NextPage<MainPageProps> = (props)  => {
     <CustomSeo title={'Jorge Jimenez Diaz'} />
     <MainPageContent
       socialMedias={props.socialMedias}
+      mainSkills={props.mainSkills}
     />
   </>
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   if (isLocal) await i18n?.reloadResources()
-  const socialMedias = await mongoDbService.getSocialMedias()
+  const [socialMedias, mainSkills] = await Promise.all([
+    mongoDbService.getSocialMedias(),
+    mongoDbService.getMainSkills()
+  ])
 
   return {
     props: {
       ...(await serverSideTranslations(locale as string, ['common'])),
-      socialMedias
+      socialMedias,
+      mainSkills
     }
   }
 }
