@@ -14,6 +14,9 @@ export const sections = (data: MainPageProps): MainPageSection[] => [
   },
   {
     component: Components.MainSkillsContent,
-    props: { mainSkills: data.mainSkills }
+    props: {
+      mainSkills: data.mainSkills,
+      descriptions: data.descriptions
+    }
   },
 ]

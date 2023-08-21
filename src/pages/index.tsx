@@ -15,22 +15,25 @@ const HomePage: NextPage<MainPageProps> = (props)  => {
     <MainPageContent
       socialMedias={props.socialMedias}
       mainSkills={props.mainSkills}
+      descriptions={props.descriptions}
     />
   </>
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   if (isLocal) await i18n?.reloadResources()
-  const [socialMedias, mainSkills] = await Promise.all([
+  const [socialMedias, mainSkills, descriptions] = await Promise.all([
     mongoDbService.getSocialMedias(),
-    mongoDbService.getMainSkills()
+    mongoDbService.getMainSkills(),
+    mongoDbService.getDescriptions()
   ])
 
   return {
     props: {
       ...(await serverSideTranslations(locale as string, ['common'])),
       socialMedias,
-      mainSkills
+      mainSkills,
+      descriptions
     }
   }
 }
