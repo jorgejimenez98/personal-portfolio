@@ -1,3 +1,5 @@
 export { CustomAvatar } from './CustomAvatar/custom-avatar.component'
-export { ScrollToTop } from './ScrollTop/scroll-top.component'
 export { CustomSeo } from './CustomSeo/CustomSeo'
+export { CustomTextArea } from './inputs/CustomTextArea/CustomTextArea'
+export { CustomTextInput } from './inputs/CustomText/CustomText'
+export { ScrollToTop } from './ScrollTop/scroll-top.component'
