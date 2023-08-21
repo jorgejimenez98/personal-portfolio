@@ -8,10 +8,16 @@ class MongoDbService {
   async fetchData<T>(
     model: mongoose.Model<T>,
   ): Promise<T[]> {
-    await db.connect()
     const data = await model.find({}, { _id: 0, __v: 0 }).lean()
-    await db.disconnect()
     return JSON.parse(JSON.stringify(data)) as T[] || []
+  }
+
+  async process(type: 'CONNECT' | 'DISCONNECT'): Promise<void> {
+    if (type === 'CONNECT') {
+      await db.connect()
+    } else if (type === 'DISCONNECT') {
+      await db.disconnect()
+    }
   }
 
   async getSocialMedias(): Promise<types.SocialMedia[]> {

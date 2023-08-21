@@ -22,11 +22,14 @@ const HomePage: NextPage<MainPageProps> = (props)  => {
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   if (isLocal) await i18n?.reloadResources()
+
+  await mongoDbService.process('CONNECT')
   const [socialMedias, mainSkills, descriptions] = await Promise.all([
     mongoDbService.getSocialMedias(),
     mongoDbService.getMainSkills(),
     mongoDbService.getDescriptions()
   ])
+  await mongoDbService.process('DISCONNECT')
 
   return {
     props: {
