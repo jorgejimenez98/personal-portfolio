@@ -13,11 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build app
-        run: yarn build
-
       - name: Install dependencies
         run: yarn install
+
+      - name: Build app
+        run: yarn build
 
       - name: Deploy to Vercel
         run: vercel --prod
