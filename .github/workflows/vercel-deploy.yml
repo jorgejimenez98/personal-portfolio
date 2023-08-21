@@ -1,0 +1,25 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build app
+        run: yarn build
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Deploy to Vercel
+        run: vercel --prod
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
