@@ -1,6 +1,6 @@
 import { db } from './db'
-import { MainSkill, SocialMedia } from '@/types'
-import { SocialMediaModel, MainSkillModel } from './models'
+import * as types from '@/types'
+import * as models from './models'
 import mongoose from 'mongoose'
 
 class MongoDbService {
@@ -14,12 +14,16 @@ class MongoDbService {
     return JSON.parse(JSON.stringify(data)) as T[] || []
   }
 
-  async getSocialMedias(): Promise<SocialMedia[]> {
-    return this.fetchData<SocialMedia>(SocialMediaModel)
+  async getSocialMedias(): Promise<types.SocialMedia[]> {
+    return this.fetchData<types.SocialMedia>(models.SocialMediaModel)
   }
 
-  async getMainSkills(): Promise<MainSkill[]> {
-    return this.fetchData<MainSkill>(MainSkillModel)
+  async getMainSkills(): Promise<types.MainSkill[]> {
+    return this.fetchData<types.MainSkill>(models.MainSkillModel)
+  }
+
+  async getDescriptions(): Promise<types.Description[]> {
+    return this.fetchData<types.Description>(models.DescriptionModel)
   }
 }
 

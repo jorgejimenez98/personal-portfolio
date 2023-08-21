@@ -15,3 +15,7 @@ export type {
 export type {
   MainSkill
 } from './main-skill.interface'
+
+export type {
+  Description
+} from './description.interface'
