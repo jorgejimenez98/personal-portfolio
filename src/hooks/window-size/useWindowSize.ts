@@ -1,28 +1,28 @@
-import { useState, useEffect } from 'react'
-import type { WindowSize, WindowSizeType } from './window-size.types'
+import { useEffect, useState } from 'react'
 
-export const useWindowSize = (): WindowSizeType => {
-  const [windowSize, setWindowSize] = useState<WindowSize>({ width: 0, height: 0 })
-  const [isMobile, setIsMobile] = useState<boolean>(false)
-  const [isTablet, setIsTablet] = useState<boolean>(false)
-  const [isDesktop, setIsDesktop] = useState<boolean>(false)
-
-  useEffect(() => {
-    const handleResize = () => {
-      const newWidth = window.innerWidth
-      setWindowSize({ width: newWidth, height: window.innerHeight })
-      setIsMobile(newWidth < 768)
-      setIsTablet(newWidth >= 768 && newWidth < 1024)
-      setIsDesktop(newWidth >= 1024)
-    }
-
-    window.addEventListener('resize', handleResize)
-
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
-  return { windowSize, isMobile, isTablet, isDesktop }
+interface Size {
+  width: number | undefined;
+  height: number | undefined;
+  isMobile: boolean
 }
 
+export const useWindowSize = (): Size => {
+  const [windowSize, setWindowSize] = useState<Size>({
+    width: undefined,
+    height: undefined,
+    isMobile: false
+  })
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+        isMobile: window.innerWidth <= 800
+      })
+    }
+    window.addEventListener('resize', handleResize)
+    handleResize()
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+  return windowSize
+}
