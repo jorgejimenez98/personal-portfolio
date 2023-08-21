@@ -22,5 +22,9 @@ export const sections = (data: MainPageProps): MainPageSection[] => [
   {
     component: Components.Education,
     props: {}
+  },
+  {
+    component: Components.Contact,
+    props: {}
   }
 ]

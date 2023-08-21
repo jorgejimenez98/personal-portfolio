@@ -18,5 +18,16 @@
     "University": "University of Camagüey, Cuba",
     "Rol": "Software Engineer",
     "Dates": "September 2017 - December 2021"
+  },
+  "Contact": {
+    "Title": "Lets Chat!",
+    "Subtitle": "Drop your info and lets talk about cool projects. My inbox is open for all!",
+    "Name": "Name *",
+    "Email": "Email *",
+    "Message": "Message *"
+  },
+  "Validations": {
+    "Required": "Field required",
+    "InvalidEmail": "Invalid Email"
   }
 }

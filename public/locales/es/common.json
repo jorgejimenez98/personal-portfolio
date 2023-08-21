@@ -18,5 +18,16 @@
     "University": "Universidad de Camagüey, Cuba",
     "Rol": "Ingeniero de Software",
     "Dates": "Septiembre 2017 - Diciembre 2021"
+  },
+  "Contact": {
+    "Title": "Chateemos!",
+    "Subtitle": "Deja tu info y hablemos sobre proyectos geniales. ¡Mi inbox está abierto para todos!",
+    "Name": "Nombre *",
+    "Email": "Correo *",
+    "Message": "Mensaje *"
+  },
+  "Validations": {
+    "Required": "Campo requerido",
+    "InvalidEmail": "Correo no válido"
   }
 }

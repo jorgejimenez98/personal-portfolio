@@ -9,7 +9,7 @@ const MainPageContent: React.FC<MainPageProps> = (props) => {
     const props = section.props
 
     return (
-      <div className='mt-10' key={idx}>
+      <div className='flex flex-col mt-10' key={idx}>
         <Component {...props} />
       </div>
     )

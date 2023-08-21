@@ -19,3 +19,7 @@ export type {
 export type {
   Description
 } from './description.interface'
+
+export type {
+  ContactFormPayload
+} from './contact-form.interfaces'
