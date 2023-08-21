@@ -5,3 +5,7 @@ export {
 export {
   global_classes
 } from './global-classes.constants'
+
+export {
+  urls
+} from './urls.constants'

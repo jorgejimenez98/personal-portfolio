@@ -12,5 +12,11 @@
   "Skills": {
     "Title": "Nivel de Exp.",
     "TitleDesc": "Sobre mi"
+  },
+  "Education": {
+    "Title": "Educación",
+    "University": "Universidad de Camagüey, Cuba",
+    "Rol": "Ingeniero de Software",
+    "Dates": "Septiembre 2017 - Diciembre 2021"
   }
 }

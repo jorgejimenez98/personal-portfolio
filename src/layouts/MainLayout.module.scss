@@ -1,9 +1,8 @@
 .appWidth {
+  margin-bottom: 80px;
 
   .content {
     margin: 0 80px 0 80px;
-    // TODO: Delete this later
-    height: 100vh;
   }
 
   @media (max-width: 768px) {

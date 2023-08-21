@@ -12,5 +12,11 @@
   "Skills": {
     "Title": "Proficiency",
     "TitleDesc": "About me"
+  },
+  "Education": {
+    "Title": "Education",
+    "University": "University of Camagüey, Cuba",
+    "Rol": "Software Engineer",
+    "Dates": "September 2017 - December 2021"
   }
 }
