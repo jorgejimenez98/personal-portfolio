@@ -1,10 +1,5 @@
+import { EmailPayload } from '@/types'
 import nodemailer from 'nodemailer'
-
-interface EmailPayload {
-  to: string
-  subject: string
-  text: string
-}
 
 class EmailService {
   private transporter: nodemailer.Transporter

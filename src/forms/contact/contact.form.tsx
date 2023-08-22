@@ -1,40 +1,56 @@
-/* eslint-disable no-unused-vars */
-import React from 'react'
-import { Formik, Form } from 'formik'
+import React, { useEffect, useState } from 'react'
+import { Formik, Form, FormikHelpers } from 'formik'
 import { useTranslation } from 'next-i18next'
 
-import { CustomTextArea, CustomTextInput } from '@/components'
+import { Alert, CustomTextArea, CustomTextInput, Modal } from '@/components'
 import { ContactFormPayload } from '@/types'
 import { initialValues, validationSchema } from './contact.schema'
+import { TwoColumnLayout } from '@/layouts'
+import { useSendEmail } from '@/hooks'
 
-interface ContactFormProps {
-  handleSubmit: (values: ContactFormPayload) => void
-}
-
-export const ContactForm: React.FC<ContactFormProps> = ({ handleSubmit }) => {
+export const ContactForm: React.FC = () => {
   const { t } = useTranslation()
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false)
+  const { mutateAsync, isLoading, isError, isSuccess } = useSendEmail()
 
-  const onSubmit = (values: ContactFormPayload) => {
-    handleSubmit(values)
+  const onSubmit = (
+    { email, message, name }: ContactFormPayload,
+    { resetForm }: FormikHelpers<ContactFormPayload>
+  ) => {
+    mutateAsync({
+      to: process.env.NODEMAILER_EMAIL as string,
+      subject: `Nuevo email de ${email}`,
+      text: `Cliente ${name} - ${email}. ${message}`
+    })
+    resetForm()
   }
 
-  return (
+  useEffect(() => {
+    if (isError || isSuccess) {
+      setIsModalVisible(true)
+    }
+  }, [isError, isSuccess])
+
+  return <>
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema(t)}
       onSubmit={onSubmit}
     >
       <Form>
-        <CustomTextInput
-          name='name'
-          placeholder={t('Contact.Name')}
-          className='mb-4'
-        />
-        <CustomTextInput
-          name='email'
-          placeholder={t('Contact.Email')}
-          className='mb-4'
-        />
+        <TwoColumnLayout>
+          <CustomTextInput
+            name='name'
+            placeholder={t('Contact.Name')}
+            className='mb-4 lg:mr-2'
+          />
+          <CustomTextInput
+            name='email'
+            placeholder={t('Contact.Email')}
+            className='mb-4 lg:ml-2'
+          />
+        </TwoColumnLayout>
+
         <CustomTextArea
           name='message'
           placeholder={t('Contact.Message')}
@@ -44,12 +60,26 @@ export const ContactForm: React.FC<ContactFormProps> = ({ handleSubmit }) => {
         <div className='flex justify-end'>
           <button
             type='submit'
-            className='btn btn-primary w-full lg:w-28'
+            className={`
+            btn btn-primary w-full
+            lg:w-28 ${isLoading ? 'loading-bars' : ''}
+            `}
           >
             Submit
           </button>
         </div>
       </Form>
     </Formik>
-  )
+
+    {/* Modal */}
+    <Modal
+      isVisible={isModalVisible}
+      handleClose={() => setIsModalVisible(false)}
+    >
+      <Alert
+        type='DEFAULT'
+        text={t('Gracias por ponerte en contacto conmigo, intentaré responderte lo mas pronto posible')}
+      />
+    </Modal>
+  </>
 }

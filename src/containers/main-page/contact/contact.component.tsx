@@ -2,16 +2,10 @@ import React from 'react'
 import { useTranslation } from 'next-i18next'
 
 import { ContactForm } from '@/forms'
-import { ContactFormPayload } from '@/types'
 import { classes } from './contact.classes'
 
 export const Contact: React.FC = () => {
   const { t } = useTranslation()
-
-  const handleSubmit = (values: ContactFormPayload) => {
-    // eslint-disable-next-line no-console
-    console.log({ values })
-  }
 
   return (
     <React.Fragment>
@@ -27,9 +21,7 @@ export const Contact: React.FC = () => {
         {t('Contact.Subtitle')}
       </p>
 
-      <ContactForm
-        handleSubmit={handleSubmit}
-      />
+      <ContactForm />
     </React.Fragment>
   )
 }

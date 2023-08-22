@@ -23,3 +23,7 @@ export type {
 export type {
   ContactFormPayload
 } from './contact-form.interfaces'
+
+export type {
+  EmailPayload
+} from './email.interfaces'
