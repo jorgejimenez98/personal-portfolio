@@ -1,4 +1,5 @@
 import { Description } from './description.interface'
+import { Expertise } from './expertise.interface'
 import { MainSkill } from './main-skill.interface'
 import { SocialMedia } from './social-media.interface'
 
@@ -10,4 +11,5 @@ export interface MainPageProps {
   socialMedias: SocialMedia[]
   mainSkills: MainSkill[]
   descriptions: Description[]
+  expertises: Expertise[]
 }

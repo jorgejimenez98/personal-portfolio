@@ -12,3 +12,8 @@ export {
   default as DescriptionModel,
   type IDescription
 } from './descriptions.model'
+
+export {
+  default as ExpertiseModel,
+  type IExpertise
+} from './expertises.model'

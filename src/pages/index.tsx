@@ -16,6 +16,7 @@ const HomePage: NextPage<MainPageProps> = (props)  => {
       socialMedias={props.socialMedias}
       mainSkills={props.mainSkills}
       descriptions={props.descriptions}
+      expertises={props.expertises}
     />
   </>
 }
@@ -24,10 +25,11 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   if (isLocal) await i18n?.reloadResources()
 
   await mongoDbService.process('CONNECT')
-  const [socialMedias, mainSkills, descriptions] = await Promise.all([
+  const [socialMedias, mainSkills, descriptions, expertises] = await Promise.all([
     mongoDbService.getSocialMedias(),
     mongoDbService.getMainSkills(),
-    mongoDbService.getDescriptions()
+    mongoDbService.getDescriptions(),
+    mongoDbService.getExpertises()
   ])
   await mongoDbService.process('DISCONNECT')
 
@@ -36,7 +38,8 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
       ...(await serverSideTranslations(locale as string, ['common'])),
       socialMedias,
       mainSkills,
-      descriptions
+      descriptions,
+      expertises
     }
   }
 }

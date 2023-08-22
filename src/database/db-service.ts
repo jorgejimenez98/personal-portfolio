@@ -31,6 +31,10 @@ class MongoDbService {
   async getDescriptions(): Promise<types.Description[]> {
     return this.fetchData<types.Description>(models.DescriptionModel)
   }
+
+  async getExpertises(): Promise<types.Expertise[]> {
+    return this.fetchData<types.Expertise>(models.ExpertiseModel)
+  }
 }
 
 const mongoDbService = new MongoDbService()

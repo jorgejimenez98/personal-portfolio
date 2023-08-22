@@ -27,3 +27,7 @@ export type {
 export type {
   EmailPayload
 } from './email.interfaces'
+
+export type {
+  Expertise
+} from './expertise.interface'
