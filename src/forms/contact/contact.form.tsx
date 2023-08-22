@@ -78,7 +78,7 @@ export const ContactForm: React.FC = () => {
     >
       <Alert
         type='DEFAULT'
-        text={t('Gracias por ponerte en contacto conmigo, intentaré responderte lo mas pronto posible')}
+        text={t('Contact.Thanks')}
       />
     </Modal>
   </>

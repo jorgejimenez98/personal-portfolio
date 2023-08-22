@@ -13,6 +13,9 @@
     "Title": "Nivel de Exp.",
     "TitleDesc": "Sobre mi"
   },
+  "General": {
+    "Close": "Cerrar"
+  },
   "Education": {
     "Title": "Educación",
     "University": "Universidad de Camagüey, Cuba",
@@ -24,7 +27,8 @@
     "Subtitle": "Deja tu info y hablemos sobre proyectos geniales. ¡Mi inbox está abierto para todos!",
     "Name": "Nombre *",
     "Email": "Correo *",
-    "Message": "Mensaje *"
+    "Message": "Mensaje *",
+    "Thanks": "Gracias por contactarme, intentaré responderte lo antes posible."
   },
   "Validations": {
     "Required": "Campo requerido",

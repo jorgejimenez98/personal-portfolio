@@ -20,7 +20,7 @@ export const Modal: React.FC<ModalProps> = (props) => {
               className='btn'
               onClick={handleClose}
             >
-              {footerProps?.okLabel || t('Close') }
+              {footerProps?.cancelLabel || t('General.Close') }
             </label>
           </div>
         )}

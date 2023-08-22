@@ -13,6 +13,9 @@
     "Title": "Proficiency",
     "TitleDesc": "About me"
   },
+  "General": {
+    "Close": "Close"
+  },
   "Education": {
     "Title": "Education",
     "University": "University of Camagüey, Cuba",
@@ -24,7 +27,8 @@
     "Subtitle": "Drop your info and lets talk about cool projects. My inbox is open for all!",
     "Name": "Name *",
     "Email": "Email *",
-    "Message": "Message *"
+    "Message": "Message *",
+    "Thanks": "Thank you for contacting me, I will try to answer you as soon as possible"
   },
   "Validations": {
     "Required": "Field required",

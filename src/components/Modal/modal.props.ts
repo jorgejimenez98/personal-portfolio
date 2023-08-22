@@ -6,7 +6,6 @@ export interface ModalProps {
   handleClose?: () => void
   footer?: React.ReactNode
   footerProps?: {
-    okLabel: string
     cancelLabel: string
   }
 }
