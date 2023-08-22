@@ -33,5 +33,12 @@
   "Validations": {
     "Required": "Campo requerido",
     "InvalidEmail": "Correo no válido"
+  },
+  "Expertise": {
+    "Title": "Experiencia",
+    "Watch": "Ver habilidades",
+    "Mobile": "Móvil",
+    "Descktop": "Escritorio",
+    "Key": "Experiencias clave"
   }
 }

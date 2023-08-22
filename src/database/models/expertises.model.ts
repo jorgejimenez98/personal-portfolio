@@ -4,6 +4,7 @@ import mongoose, { Model, Schema } from 'mongoose'
 export interface IExpertise extends Expertise { }
 
 const expertisesSchema = new Schema({
+  rol: { type: String, required: true },
   backgroundColor: { type: String, required: true },
   logoUrl: { type: String, required: true },
   name_en: { type: String, required: true },

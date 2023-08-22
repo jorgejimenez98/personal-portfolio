@@ -1,5 +1,6 @@
 
 export interface Expertise {
+  rol: string
   backgroundColor: string
   logoUrl: string
   name_en: string
