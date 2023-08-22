@@ -12,7 +12,9 @@ const nextConfig = {
     ],
   },
   env: {
-    MONGO_DB_CONNECTION: process.env.MONGO_DB_CONNECTION
+    MONGO_DB_CONNECTION: process.env.MONGO_DB_CONNECTION,
+    NODEMAILER_EMAIL: process.env.NODEMAILER_EMAIL,
+    NODEMAILER_PASSWORD: process.env.NODEMAILER_PASSWORD
   }
 }
 
