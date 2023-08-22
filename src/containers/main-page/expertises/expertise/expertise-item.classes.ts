@@ -7,7 +7,7 @@ export const classes = {
   logo_content: 'shadow-xl rounded-full',
   logo: 'mask mask-circle',
   body_content: 'p-6 mt-14 flex justify-center items-center flex-col',
-  rol_text: 'text-gray-700 text-3xl opacity-70 mb-2',
+  rol_text: 'text-gray-700 text-3xl opacity-70 mb-2 text-center',
   small_text: 'opacity-50 ml-5',
   description: 'text-gray-600 mt-5 pl-2 pr-2'
 }

@@ -40,8 +40,8 @@ export const getYearMonthDifference = (dateStart: string, dateEnd: string): stri
   let monthDiff = endDate.getMonth() - startDate.getMonth()
 
   const labels = {
-    es: { year: 'año', years: 'años', month: 'mes', months: 'meses' },
-    en: { year: 'year', years: 'years', month: 'month', months: 'months' },
+    es: { year: 'año', years: 'años', month: 'mes', months: 'meses', and: ' y ' },
+    en: { year: 'year', years: 'years', month: 'month', months: 'months', and: ' and ' },
   }[i18n?.language!]
 
   if (monthDiff < 0) {
@@ -57,7 +57,7 @@ export const getYearMonthDifference = (dateStart: string, dateEnd: string): stri
 
   if (monthDiff > 0) {
     if (yearDiff > 0) {
-      result += ' y '
+      result += labels?.and
     }
     result += `${monthDiff} ${monthDiff === 1 ? labels?.month : labels?.months}`
   }

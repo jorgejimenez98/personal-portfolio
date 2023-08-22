@@ -13,7 +13,7 @@ export interface Expertise {
   description_es: string
   backendSkills: string[]
   frontendSkills: string[]
-  descktopSkills: string[]
+  desktopSkills: string[]
   mobileSkills: string[]
   keyExperiences: string[]
 }

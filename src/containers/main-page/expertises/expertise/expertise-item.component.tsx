@@ -14,7 +14,7 @@ export const ExpertiseItem: React.FC<{ expertise: Expertise }> = ({ expertise })
     { label: 'Frontend', items: expertise.frontendSkills },
     { label: 'Backend', items: expertise.backendSkills },
     { label: t('Expertise.Mobile'), items: expertise.mobileSkills },
-    { label: t('Expertise.Descktop'), items: expertise.descktopSkills },
+    { label: t('Expertise.Descktop'), items: expertise.desktopSkills },
     { label: t('Expertise.Key'), items: expertise.keyExperiences,  isKey: true },
   ]
 

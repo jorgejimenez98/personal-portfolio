@@ -9,7 +9,7 @@ interface SkillItemsProps {
 
 export const SkillItems: React.FC<SkillItemsProps> = ({ label, items, isKey = false }) => {
 
-  return items?.length && (
+  return (items?.length > 0) && (
     <div>
       {isKey && <div className='divider' />}
 

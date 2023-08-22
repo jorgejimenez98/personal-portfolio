@@ -12,11 +12,11 @@ export const ExpertiseContent: React.FC<{ expertises: Expertise[] }> = ({ expert
     <React.Fragment>
       {/* Title */}
       <h1 className={global_classes.left_big_text}>
-        {t('Experience.Title')}
+        {t('Expertise.Title')}
       </h1>
 
       {/* List */}
-      <div className='flex flex-wrap -mx-4 mt-6'>
+      <div className='flex flex-wrap -mx-4 mt-6 flex-row-reverse'>
         {expertises.map((expertise, idx) => (
           <ExpertiseItem
             expertise={expertise}
