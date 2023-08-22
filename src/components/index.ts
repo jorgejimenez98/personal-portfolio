@@ -1,4 +1,6 @@
 export { Alert } from './Alert/alert.component'
+export { Badge } from './Badge/badge.component'
+export { Collapse } from './Collapse/collapse.component'
 export { CustomAvatar } from './CustomAvatar/custom-avatar.component'
 export { CustomSeo } from './CustomSeo/CustomSeo'
 export { CustomTextArea } from './inputs/CustomTextArea/CustomTextArea'
