@@ -1,5 +1,7 @@
+export { Alert } from './Alert/alert.component'
 export { CustomAvatar } from './CustomAvatar/custom-avatar.component'
 export { CustomSeo } from './CustomSeo/CustomSeo'
 export { CustomTextArea } from './inputs/CustomTextArea/CustomTextArea'
 export { CustomTextInput } from './inputs/CustomText/CustomText'
+export { Modal } from './Modal/modal.component'
 export { ScrollToTop } from './ScrollTop/scroll-top.component'
