@@ -47,3 +47,10 @@ body {
       transition: 0.1s;
   }
 }
+
+.modal-mask {
+  background: hsla(0,0%,100%,.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+}
