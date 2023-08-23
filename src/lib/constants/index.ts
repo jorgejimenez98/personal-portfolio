@@ -9,3 +9,7 @@ export {
 export {
   urls
 } from './urls.constants'
+
+export {
+  labels
+} from './labels.constants'
