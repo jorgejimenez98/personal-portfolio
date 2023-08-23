@@ -62,7 +62,7 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
 
   return {
     ...appProps,
-    language: cookies?.['language'],
-    theme: cookies?.['theme']
+    language: cookies?.['language'] || 'en',
+    theme: cookies?.['theme'] || 'cupcake'
   }
 }
