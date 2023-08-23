@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next'
 import { ScrollToTop } from '@/components'
 import { TheHeader } from '@/components/navbars'
 import { useCookie } from '@/hooks'
-import styles from './MainLayout.module.scss'
+import styles from './main-layout.module.scss'
 
-const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { i18n } = useTranslation()
   const { value: selectedLanguage } = useCookie('language')
 
@@ -29,5 +29,3 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     </div>
   )
 }
-
-export default MainLayout
