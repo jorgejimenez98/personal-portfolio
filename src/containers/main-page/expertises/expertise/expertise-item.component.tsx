@@ -1,14 +1,19 @@
 import React from 'react'
 import Image from 'next/image'
-import { Expertise } from '@/types'
 import { useTranslation } from 'next-i18next'
-import { getHumanizedDate, getYearMonthDifference } from '@/lib/utils'
-import { Collapse } from '@/components'
-import { SkillItems } from './skills/skills.component'
+
 import { classes } from './expertise-item.classes'
+import { Collapse } from '@/components'
+import { Expertise } from '@/types'
+import { getHumanizedDate, getYearMonthDifference } from '@/lib/utils'
+import { SkillItems } from './skills/skills.component'
+import { useWindowSize } from '@/hooks'
 
 export const ExpertiseItem: React.FC<{ expertise: Expertise }> = ({ expertise }) => {
   const { t, i18n: { language } } = useTranslation()
+  const { isMobile } = useWindowSize()
+
+  const expertiseDescription = expertise[`description_${language}` as keyof Expertise]
 
   const skills = [
     { label: 'Frontend', items: expertise.frontendSkills },
@@ -21,7 +26,6 @@ export const ExpertiseItem: React.FC<{ expertise: Expertise }> = ({ expertise })
   return (
     <div className={classes.content}>
       <div className={classes.rounded_card}>
-
         {/* Header */}
         <div
           className={classes.header_content}
@@ -58,22 +62,27 @@ export const ExpertiseItem: React.FC<{ expertise: Expertise }> = ({ expertise })
           </h2>
 
           {/* Dates */}
-          <p>
-            {getHumanizedDate(expertise.dateStart)}&nbsp;-&nbsp;
-            {getHumanizedDate(expertise.dateEnd)}
+          <div className={classes.dates_content}>
+            <p className={classes.center}>
+              {getHumanizedDate(expertise.dateStart)}&nbsp;-&nbsp;
+              {getHumanizedDate(expertise.dateEnd)}
+            </p>
             <small className={classes.small_text}>
               {getYearMonthDifference(expertise.dateStart, expertise.dateEnd)}
             </small>
-          </p>
+          </div>
 
           {/* Description */}
           <p className={classes.description}>
-            {expertise[`description_${language}` as keyof Expertise]}
+            {expertiseDescription}
           </p>
         </div>
 
         {/* Skills */}
-        <Collapse title={t('Expertise.Watch')}>
+        <Collapse title={isMobile ? t('General.WatchMore') : t('Expertise.Watch')}>
+          <p className={classes.description_mobile}>
+            {expertiseDescription}
+          </p>
           {skills.map((skill, idx) => (
             <SkillItems key={idx} {...skill} />
           ))}
