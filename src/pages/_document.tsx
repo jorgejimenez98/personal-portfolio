@@ -1,5 +1,6 @@
 import { images, labels } from '@/lib/constants'
 import { AppLanguage, AppTheme } from '@/types'
+import { Analytics } from '@vercel/analytics/react'
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document'
 
 interface DocumentProps {
@@ -27,16 +28,18 @@ export default function MyDocument({ language, theme }: DocumentProps) {
 
         {/* Open Graph tags */}
         <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://jorge-jimenez.dev/' />
+        <meta property='og:locale' content='en_US' />
+        <meta property='og:url' content='https://www.jorgejimenez.dev/' />
         <meta property='og:title' content='Jorge Jimenez Diaz' />
-        <meta property='og:image' content={images.profile} />
+        <meta property='og:site_name' content='Jorge Jimenez Diaz' />
+        <meta property='og:image' content={images.small_profile} />
         <meta property='og:description' content={labels.web_description} />
 
         {/* Twitter Card tags */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:title' content='Jorge Jimenez Diaz' />
         <meta name='twitter:description' content={labels.web_description} />
-        <meta name='twitter:image' content={images.profile} />
+        <meta name='twitter:image' content={images.small_profile} />
 
         <link
           rel='stylesheet'
@@ -47,6 +50,7 @@ export default function MyDocument({ language, theme }: DocumentProps) {
       <body>
         <Main />
         <NextScript />
+        <Analytics />
       </body>
     </Html>
   )

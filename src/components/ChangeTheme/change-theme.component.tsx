@@ -7,7 +7,7 @@ import { LigthIcon } from '@/assets/icons'
 import { useCookie } from '@/hooks'
 
 const ChangeTheme: React.FC = () => {
-  const { value: selectedTheme, setValue: setLocalTheme } = useCookie('theme')
+  const { value: selectedTheme, setValue: setLocalTheme } = useCookie('theme', 'cupcake')
   const [isChecked, setIsChecked] = useState<boolean>(selectedTheme === 'dark')
 
   useEffect(() => {
