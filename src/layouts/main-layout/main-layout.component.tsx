@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { ScrollToTop } from '@/components'
-import { TheHeader } from '@/components/layout'
+import { TheFooter, TheHeader } from '@/components/layout'
 import { useCookie } from '@/hooks'
 import styles from './main-layout.module.scss'
 
@@ -19,13 +19,15 @@ export const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }
   }, [selectedLanguage])
 
   return (
-    <div className={styles.appWidth}>
+    <React.Fragment>
       <TheHeader />
       <ScrollToTop />
 
       <main className={styles.content}>
         {children}
       </main>
-    </div>
+
+      <TheFooter />
+    </React.Fragment>
   )
 }

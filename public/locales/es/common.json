@@ -43,5 +43,8 @@
     "Mobile": "Móvil",
     "Descktop": "Escritorio",
     "Key": "Experiencias clave"
+  },
+  "Footer": {
+    "Text": "Copyright © {{ year }} - Todos los derechos reservados"
   }
 }

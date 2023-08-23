@@ -43,5 +43,8 @@
     "Mobile": "Mobile",
     "Descktop": "Descktop",
     "Key": "Key experiences"
+  },
+  "Footer": {
+    "Text": "Copyright © {{ year }} - All right reserved "
   }
 }
