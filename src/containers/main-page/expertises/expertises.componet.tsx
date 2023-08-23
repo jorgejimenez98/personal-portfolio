@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next'
 import { global_classes } from '@/lib/constants'
 import { Expertise } from '@/types'
 import { ExpertiseItem } from './expertise/expertise-item.component'
+import { ListLayout } from '@/layouts'
 
 export const ExpertiseContent: React.FC<{ expertises: Expertise[] }> = ({ expertises }) => {
   const { t } = useTranslation()
@@ -16,14 +17,14 @@ export const ExpertiseContent: React.FC<{ expertises: Expertise[] }> = ({ expert
       </h1>
 
       {/* List */}
-      <div className='flex flex-wrap -mx-4 mt-6 flex-row-reverse'>
+      <ListLayout>
         {expertises.map((expertise, idx) => (
           <ExpertiseItem
             expertise={expertise}
             key={idx}
           />
         ))}
-      </div>
+      </ListLayout>
     </React.Fragment>
   )
 }
