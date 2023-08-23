@@ -10,7 +10,7 @@ import CustomLogo from '@/components/CustomLogo/custom-logo.component'
 import HeaderItemList from './HeaderItems/header-items.component'
 import styles from './header.module.scss'
 
-const TheHeader: React.FC = () => {
+export const TheHeader: React.FC = () => {
   const { isMobile } = useWindowSize()
 
   return (
@@ -49,5 +49,3 @@ const TheHeader: React.FC = () => {
     </nav>
   )
 }
-
-export default TheHeader
