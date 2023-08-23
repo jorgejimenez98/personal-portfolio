@@ -12,7 +12,7 @@ export const CustomTextArea: React.FC<FieldHookConfig<string>> = ({ placeholder,
         {...field}
         placeholder={placeholder}
         className={`
-        textarea h-28 textarea-bordered
+        textarea h-48 textarea-bordered
           ${hasError ? 'textarea-error' : ''}
           ${className || ''}
         `}

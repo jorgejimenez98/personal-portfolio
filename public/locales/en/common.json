@@ -14,7 +14,8 @@
     "TitleDesc": "About me"
   },
   "General": {
-    "Close": "Close"
+    "Close": "Close",
+    "FullStack": "Full Stack Developer"
   },
   "Education": {
     "Title": "Education",
@@ -23,6 +24,8 @@
     "Dates": "September 2017 - December 2021"
   },
   "Contact": {
+    "Location": "Madrid, Spain",
+    "SendEmail": "Send email",
     "Title": "Lets Chat!",
     "Subtitle": "Drop your info and lets talk about cool projects. My inbox is open for all!",
     "Name": "Name *",

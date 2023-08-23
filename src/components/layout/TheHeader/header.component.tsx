@@ -6,7 +6,7 @@ import { MenuIcon } from '@/assets/icons'
 import { useWindowSize } from '@/hooks'
 import ChangeLanguage from '@/components/ChangeLanguage/change-language.component'
 import ChangeTheme from '@/components/ChangeTheme/change-theme.component'
-import CustomLogo from '@/components/CustomLogo/custom-logo.component'
+import { CustomLogo } from '@/components/CustomLogo/custom-logo.component'
 import HeaderItemList from './HeaderItems/header-items.component'
 import styles from './header.module.scss'
 

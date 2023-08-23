@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './custom-logo.module.scss'
 
-const CustomLogo: React.FC<{ text: string }> = ({ text }) => {
+export const CustomLogo: React.FC<{ text: string }> = ({ text }) => {
   return (
     <div className={styles['logo']}>
       <span className={styles['grey-color']}> &lt;</span>
@@ -11,4 +11,3 @@ const CustomLogo: React.FC<{ text: string }> = ({ text }) => {
   )
 }
 
-export default CustomLogo

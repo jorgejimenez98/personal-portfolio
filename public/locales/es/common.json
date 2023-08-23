@@ -14,7 +14,8 @@
     "TitleDesc": "Sobre mi"
   },
   "General": {
-    "Close": "Cerrar"
+    "Close": "Cerrar",
+    "FullStack": "Desarrollador Full Stack"
   },
   "Education": {
     "Title": "Educación",
@@ -23,6 +24,8 @@
     "Dates": "Septiembre 2017 - Diciembre 2021"
   },
   "Contact": {
+    "Location": "Madrid, España",
+    "SendEmail": "Enviar correo",
     "Title": "Chateemos!",
     "Subtitle": "Deja tu info y hablemos sobre proyectos geniales. ¡Mi inbox está abierto para todos!",
     "Name": "Nombre *",

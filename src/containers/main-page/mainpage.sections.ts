@@ -29,6 +29,6 @@ export const sections = (data: MainPageProps): MainPageSection[] => [
   },
   {
     component: Components.Contact,
-    props: {}
+    props: { socialMedias: data.socialMedias }
   }
 ]

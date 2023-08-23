@@ -62,10 +62,10 @@ export const ContactForm: React.FC = () => {
             type='submit'
             className={`
             btn btn-primary w-full
-            lg:w-28 ${isLoading ? 'loading-bars' : ''}
+            lg:w-40 ${isLoading ? 'loading-bars' : ''}
             `}
           >
-            Submit
+            {t('Contact.SendEmail')}
           </button>
         </div>
       </Form>
