@@ -7,7 +7,7 @@ import { useWindowSize } from '@/hooks'
 import ChangeLanguage from '@/components/ChangeLanguage/change-language.component'
 import ChangeTheme from '@/components/ChangeTheme/change-theme.component'
 import { CustomLogo } from '@/components/CustomLogo/custom-logo.component'
-import HeaderItemList from './HeaderItems/header-items.component'
+import { HeaderItemList } from './HeaderItems/header-items.component'
 import styles from './header.module.scss'
 
 export const TheHeader: React.FC = () => {

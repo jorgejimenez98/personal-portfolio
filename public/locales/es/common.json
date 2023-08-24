@@ -2,7 +2,9 @@
   "Header": {
     "Education": "Educación",
     "Projects": "Proyectos",
-    "Experience": "Experiencia"
+    "Experience": "Experiencia",
+    "About": "Sobre mí",
+    "Contact": "Contacto"
   },
   "Intro": {
     "ResumeLink": "Ver mi CV",

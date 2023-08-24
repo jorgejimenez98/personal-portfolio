@@ -4,13 +4,16 @@ import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 
 import { classes } from './education.classes'
-import { images, urls } from '@/lib/constants'
+import { header_ids, images, urls } from '@/lib/constants'
 
 export const Education: React.FC = () => {
   const { t } = useTranslation()
 
   return (
-    <div className={classes.content}>
+    <div
+      className={classes.content}
+      id={header_ids.education}
+    >
       <h1 className={classes.education_title}>
         {t('Education.Title')}
       </h1>
