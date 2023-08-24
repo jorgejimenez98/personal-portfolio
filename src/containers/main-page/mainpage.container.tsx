@@ -1,6 +1,7 @@
 import React from 'react'
 import { sections } from './mainpage.sections'
 import { MainPageProps } from '@/types'
+import { FadeLayout } from '@/layouts'
 
 const MainPageContent: React.FC<MainPageProps> = (props) => {
 
@@ -10,7 +11,9 @@ const MainPageContent: React.FC<MainPageProps> = (props) => {
 
     return (
       <div className='flex flex-col mt-10' key={idx}>
-        <Component {...props} />
+        <FadeLayout>
+          <Component {...props} />
+        </FadeLayout>
       </div>
     )
   })
