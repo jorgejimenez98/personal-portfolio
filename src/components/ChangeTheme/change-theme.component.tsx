@@ -1,14 +1,26 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styles from './change-theme.module.scss'
 
 import { AppTheme } from '@/types'
 import { LigthIcon } from '@/assets/icons'
-import { useCookie } from '@/hooks'
+import Cookies from 'js-cookie'
 
 const ChangeTheme: React.FC = () => {
-  const { value: selectedTheme, setValue: setLocalTheme } = useCookie('theme', 'cupcake')
+  const selectedTheme = Cookies.get('theme') as AppTheme
   const [isChecked, setIsChecked] = useState<boolean>(selectedTheme === 'dark')
+  const htmlTheme = document.documentElement.getAttribute('data-theme')
+
+  useEffect(() => {
+    if (!selectedTheme) {
+      setHtmlTheme('cupcake')
+      Cookies.set('theme', 'cupcake')
+    } else if (selectedTheme !== htmlTheme) {
+      setHtmlTheme(selectedTheme)
+      setIsChecked(selectedTheme === 'dark')
+    }
+  }, [])
 
   useEffect(() => {
     setIsChecked(selectedTheme === 'dark')
@@ -18,8 +30,12 @@ const ChangeTheme: React.FC = () => {
     const isChecked = event.target.checked
     const newValue: AppTheme = isChecked ? 'dark' : 'cupcake'
     setIsChecked(isChecked)
-    setLocalTheme(newValue)
-    document.documentElement.setAttribute('data-theme', newValue)
+    Cookies.set('theme', newValue)
+    setHtmlTheme(newValue)
+  }
+
+  const setHtmlTheme = (theme: AppTheme) => {
+    document.documentElement.setAttribute('data-theme', theme)
   }
 
   return (

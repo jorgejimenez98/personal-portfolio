@@ -13,6 +13,7 @@ export const Gallery: React.FC<{ imageUrls: string[] }> = ({ imageUrls }) => {
           key={idx}
           className='rounded-box bg-contain'
           style={{ maxWidth: '100%', height: 'auto' }}
+          loading='lazy'
         />
       ))}
     </div>

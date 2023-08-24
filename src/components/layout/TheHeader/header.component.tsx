@@ -1,14 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 
 import { MenuIcon } from '@/assets/icons'
 import { useWindowSize } from '@/hooks'
 import ChangeLanguage from '@/components/ChangeLanguage/change-language.component'
-import ChangeTheme from '@/components/ChangeTheme/change-theme.component'
 import { CustomLogo } from '@/components/CustomLogo/custom-logo.component'
 import { HeaderItemList } from './HeaderItems/header-items.component'
 import styles from './header.module.scss'
+
+const ChangeTheme = dynamic(() => import('@/components/ChangeTheme/change-theme.component'), {
+  ssr: false
+})
 
 export const TheHeader: React.FC = () => {
   const { isMobile } = useWindowSize()
