@@ -24,6 +24,10 @@ export const sections = (data: MainPageProps): MainPageSection[] => [
     props: { expertises: data.expertises }
   },
   {
+    component: Components.Projects,
+    props: { projects: data.projects }
+  },
+  {
     component: Components.Education,
     props: {}
   },

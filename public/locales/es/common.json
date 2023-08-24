@@ -45,6 +45,12 @@
     "Descktop": "Escritorio",
     "Key": "Experiencias clave"
   },
+  "Projects": {
+    "Title": "Proyectos",
+    "SourceCode": "Código fuente",
+    "VisitWebsite": "Visiter web",
+    "WatchImages": "Ver imágenes"
+  },
   "Footer": {
     "Text": "Copyright © {{ year }} - Todos los derechos reservados"
   }

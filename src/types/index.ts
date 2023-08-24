@@ -31,3 +31,7 @@ export type {
 export type {
   Expertise
 } from './expertise.interface'
+
+export type {
+  Project
+} from './projects.interface'

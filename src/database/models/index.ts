@@ -17,3 +17,8 @@ export {
   default as ExpertiseModel,
   type IExpertise
 } from './expertises.model'
+
+export {
+  default as ProjectModel,
+  type IProject
+} from './projects.model'

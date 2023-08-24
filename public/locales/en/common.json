@@ -45,6 +45,12 @@
     "Descktop": "Descktop",
     "Key": "Key experiences"
   },
+  "Projects": {
+    "Title": "Big Projects",
+    "SourceCode": "Source code",
+    "VisitWebsite": "Visit website",
+    "WatchImages": "Watch images"
+  },
   "Footer": {
     "Text": "Copyright © {{ year }} - All right reserved "
   }

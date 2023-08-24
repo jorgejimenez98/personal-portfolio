@@ -35,6 +35,23 @@ class MongoDbService {
   async getExpertises(): Promise<types.Expertise[]> {
     return this.fetchData<types.Expertise>(models.ExpertiseModel)
   }
+
+  async getProjects(): Promise<types.Project[]> {
+    return this.fetchData<types.Project>(models.ProjectModel)
+  }
+
+  async getPageData(): Promise<types.MainPageProps> {
+    await this.process('CONNECT')
+    const [socialMedias, mainSkills, descriptions, expertises, projects] = await Promise.all([
+      this.getSocialMedias(),
+      this.getMainSkills(),
+      this.getDescriptions(),
+      this.getExpertises(),
+      this.getProjects()
+    ])
+    await this.process('DISCONNECT')
+    return { socialMedias, mainSkills, descriptions, expertises, projects }
+  }
 }
 
 const mongoDbService = new MongoDbService()
