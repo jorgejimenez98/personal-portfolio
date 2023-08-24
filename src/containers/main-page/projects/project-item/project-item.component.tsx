@@ -30,14 +30,14 @@ export const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
                 src={project.logoUrl}
                 className={classes.logo}
                 width={50}
-                height={50}
+                height={30}
                 alt='project-logo'
               />
             </figure>
           </div>
 
           {/* Description */}
-          <p>
+          <p className={classes.opacity}>
             {project[`description_${language}` as keyof Project]}
           </p>
 

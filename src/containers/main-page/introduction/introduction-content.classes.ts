@@ -1,6 +1,6 @@
 export const classes = {
   btn_cv: 'btn btn-primary lg:items-center',
-  description_message: 'mt-5 text-xl text-center opacity-40 lg:text-start lg:mt-10 lg:text-3xl',
+  description_message: 'mt-5 text-xl text-center opacity-70 lg:text-start lg:mt-10 lg:text-3xl',
   hello_message: 'mr-5 text-4xl text-center font-bold lg:text-7xl lg:text-start lg:mt-16',
   image_container: 'flex justify-center',
   image_mask: 'mask mask-squircle shadow-md',
