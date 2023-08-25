@@ -57,18 +57,16 @@ export const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
 
             {/* Modal Buttom */}
             {project.images?.length > 0 && (
-              <div className={classes.modal_btn}>
-                <div
-                  className={classes.tooltip}
-                  data-tip={t('Projects.WatchImages')}
+              <div
+                className={classes.tooltip}
+                data-tip={t('Projects.WatchImages')}
+              >
+                <button
+                  className={classes.eye_button}
+                  onClick={() => setIsModalVisible(true)}
                 >
-                  <button
-                    className={classes.eye_button}
-                    onClick={() => setIsModalVisible(true)}
-                  >
-                    <i className={classes.eye_icon} />
-                  </button>
-                </div>
+                  <i className={classes.eye_icon} />
+                </button>
               </div>
             )}
 
@@ -82,7 +80,7 @@ export const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
       isVisible={isModalVisible}
       handleClose={() => setIsModalVisible(false)}
     >
-      <Gallery imageUrls={project.images}/>
+      <Gallery imageUrls={project.images} />
     </Modal>
   </>
 }

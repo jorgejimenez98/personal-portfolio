@@ -1,11 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 import React from 'react'
+import Image from 'next/image'
 
 export const Gallery: React.FC<{ imageUrls: string[] }> = ({ imageUrls }) => {
   return (
     <div className='max-w-lg p-4 space-x-4 carousel carousel-center bg-neutral rounded-box'>
       {imageUrls.map((url, idx) => (
-        <img
+        <Image
           src={url}
           alt='image'
           width={200}
