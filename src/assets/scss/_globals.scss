@@ -5,7 +5,8 @@ body {
 
 /* Global Body */
 body {
-    margin: 0;
+    max-width: 2400px;
+    margin: auto;
     font: 19px / 23px Montserrat, "Montserrat", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
