@@ -3,12 +3,15 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Global Body */
 body {
     margin: 0;
     font: 19px / 23px Montserrat, "Montserrat", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+/* Nabvar */
 
 ::-webkit-scrollbar {
   width: 0.3em;
@@ -34,8 +37,9 @@ body {
 }
 
 
+/* Cusotm Link */
 .custom-link {
-  text-decoration: none;
+  text-decoration: underline;
   transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
   outline: 0 solid rgba(0, 72, 255, 0.071);
   border-radius: 4px;
@@ -48,6 +52,11 @@ body {
   }
 }
 
+.no-decoration {
+  text-decoration: none;
+}
+
+/* Modal Mask */
 .modal-mask {
   background: hsla(0,0%,100%,.3);
   -webkit-backdrop-filter: blur(10px);

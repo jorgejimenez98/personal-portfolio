@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 
@@ -36,9 +37,16 @@ export const ExpertiseItem: React.FC<{ expertise: Expertise }> = ({ expertise })
           <div className={classes.company_content}>
 
             {/* Name */}
-            <h3 className={classes.name}>
-              {expertise[`name_${language}` as keyof Expertise]}
-            </h3>
+            <Link
+              passHref
+              href={expertise.companyUrl || '#'}
+              target={expertise.companyUrl ? '_blank' : '_self'}
+            >
+              <h3 className={classes.name}>
+                {expertise[`name_${language}` as keyof Expertise]}
+              </h3>
+            </Link>
+
 
             {/* Logo */}
             <div className={classes.logo_content}>
@@ -59,6 +67,10 @@ export const ExpertiseItem: React.FC<{ expertise: Expertise }> = ({ expertise })
           {/* Rol */}
           <h2 className={classes.rol_text}>
             {expertise.rol}
+          </h2>
+
+          <h2 className={classes.location_text}>
+            {expertise[`location_${language}` as keyof Expertise]}
           </h2>
 
           {/* Dates */}

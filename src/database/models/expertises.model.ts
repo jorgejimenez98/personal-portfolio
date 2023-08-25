@@ -5,6 +5,7 @@ export interface IExpertise extends Expertise { }
 
 const expertisesSchema = new Schema({
   rol: { type: String, required: true },
+  companyUrl: { type: String, requried: false },
   backgroundColor: { type: String, required: true },
   logoUrl: { type: String, required: true },
   name_en: { type: String, required: true },

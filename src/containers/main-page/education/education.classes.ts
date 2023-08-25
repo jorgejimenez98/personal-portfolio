@@ -6,6 +6,6 @@ export const classes = {
   image: 'mask mask-circle cursor-pointer shadow-md transition duration-300',
   description: 'flex flex-col',
   name: 'text-2xl font-bold mb-3',
-  rol_text: 'custom-link font-bold opacity-90',
+  rol_text: 'custom-link font-bold opacity-90 mb-2',
   dates_text: 'opacity-60 mt-2 lg:m-0'
 }

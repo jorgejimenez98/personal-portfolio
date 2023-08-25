@@ -5,7 +5,7 @@ export const classes = {
   body_content: 'flex justify-between',
   title: 'card-title text-3xl opacity-70',
   figure: 'py-6 lg:p-3',
-  logo: 'mask mask-squircle rounded-2xl',
+  logo: 'mask mask-squircle',
   actions: 'flex justify-between flex-row mt-4 -mb-3',
   url_button: 'btn btn-secondary rounded-full w-40',
   modal_btn: 'flex justify-end w-80',

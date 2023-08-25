@@ -29,9 +29,10 @@ export const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
               <Image
                 src={project.logoUrl}
                 className={classes.logo}
-                width={50}
-                height={30}
+                width={60}
+                height={60}
                 alt='project-logo'
+                data-theme='cupcake'
               />
             </figure>
           </div>

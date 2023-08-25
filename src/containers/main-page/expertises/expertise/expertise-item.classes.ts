@@ -9,8 +9,9 @@ export const classes = {
   header_content: 'h-36 rounded-tr-lg rounded-tl-lg shadow-xl',
   logo_content: 'shadow-xl rounded-full',
   logo: 'mask mask-circle',
-  name: 'text-2xl mb-2 font-bold text-white mt-12',
+  name: 'text-2xl mb-2 font-bold text-white mt-12 custom-link no-decoration',
   rol_text: 'text-3xl opacity-70 mb-2 text-center',
+  location_text: 'mb-2 opacity-100',
   rounded_card: 'rounded-lg shadow-lg',
   small_text: 'opacity-50 text-center',
 }
