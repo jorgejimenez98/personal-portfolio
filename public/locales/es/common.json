@@ -1,59 +1,59 @@
 {
-  "Header": {
-    "Education": "Educación",
-    "Projects": "Proyectos",
-    "Experience": "Experiencia",
-    "About": "Sobre mí",
-    "Contact": "Contacto"
+  "Contact": {
+    "Email": "Correo *",
+    "Location": "Madrid, España",
+    "Message": "Mensaje *",
+    "Name": "Nombre *",
+    "SendEmail": "Enviar correo",
+    "Subtitle": "Deja tu info y hablemos sobre proyectos geniales. ¡Mi inbox está abierto para todos!",
+    "Thanks": "Gracias por contactarme, intentaré responderte lo antes posible.",
+    "Title": "Chateemos!"
   },
-  "Intro": {
-    "ResumeLink": "Ver mi CV",
-    "Hello": "Hola mundo, soy Jorge",
-    "Description": "Soy Ingeniero de Software con {{ years }} años de experiencia full-stack con Django y React, con capacidad para desarrollar sistemas web y aplicaciones android(Java). Me gusta trabajar en equipo, soy proactivo y motivado, aprendo rápido, tengo un razonamiento sólido, habilidades para resolver problemas y estoy capacitado para crear código limpio, probado y eficiente."
+  "Education": {
+    "Dates": "Septiembre 2017 - Diciembre 2021",
+    "Rol": "Ingeniero de Software",
+    "Title": "Educación",
+    "University": "Universidad de Camagüey, Cuba"
   },
-  "Skills": {
-    "Title": "Nivel de Exp.",
-    "TitleDesc": "Sobre mi"
+  "Expertise": {
+    "Descktop": "Escritorio",
+    "Key": "Experiencias clave",
+    "Mobile": "Móvil",
+    "Title": "Experiencia",
+    "Watch": "Ver habilidades"
+  },
+  "Footer": {
+    "Text": "Copyright © {{ year }} - Todos los derechos reservados"
   },
   "General": {
     "Close": "Cerrar",
     "FullStack": "Desarrollador Full Stack",
     "WatchMore": "Ver más"
   },
-  "Education": {
-    "Title": "Educación",
-    "University": "Universidad de Camagüey, Cuba",
-    "Rol": "Ingeniero de Software",
-    "Dates": "Septiembre 2017 - Diciembre 2021"
+  "Header": {
+    "About": "Sobre mí",
+    "Contact": "Contacto",
+    "Education": "Educación",
+    "Experience": "Experiencia",
+    "Projects": "Proyectos"
   },
-  "Contact": {
-    "Location": "Madrid, España",
-    "SendEmail": "Enviar correo",
-    "Title": "Chateemos!",
-    "Subtitle": "Deja tu info y hablemos sobre proyectos geniales. ¡Mi inbox está abierto para todos!",
-    "Name": "Nombre *",
-    "Email": "Correo *",
-    "Message": "Mensaje *",
-    "Thanks": "Gracias por contactarme, intentaré responderte lo antes posible."
-  },
-  "Validations": {
-    "Required": "Campo requerido",
-    "InvalidEmail": "Correo no válido"
-  },
-  "Expertise": {
-    "Title": "Experiencia",
-    "Watch": "Ver habilidades",
-    "Mobile": "Móvil",
-    "Descktop": "Escritorio",
-    "Key": "Experiencias clave"
+  "Intro": {
+    "Description": "Soy Ingeniero de Software con {{ years }} años de experiencia full-stack con Django y React, con capacidad para desarrollar sistemas web y aplicaciones android(Java). Me gusta trabajar en equipo, soy proactivo y motivado, aprendo rápido, tengo un razonamiento sólido, habilidades para resolver problemas y estoy capacitado para crear código limpio, probado y eficiente.",
+    "Hello": "Hola mundo, soy Jorge",
+    "ResumeLink": "Ver mi CV"
   },
   "Projects": {
-    "Title": "Proyectos",
     "SourceCode": "Código fuente",
-    "VisitWebsite": "Visiter web",
+    "Title": "Proyectos",
+    "VisitWebsite": "Visitar web",
     "WatchImages": "Ver imágenes"
   },
-  "Footer": {
-    "Text": "Copyright © {{ year }} - Todos los derechos reservados"
+  "Skills": {
+    "Title": "Nivel de Exp.",
+    "TitleDesc": "Sobre mi"
+  },
+  "Validations": {
+    "InvalidEmail": "Correo no válido",
+    "Required": "Campo requerido"
   }
 }

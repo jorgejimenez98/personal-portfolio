@@ -1,59 +1,59 @@
 {
-  "Header": {
-    "Education": "Education",
-    "Projects": "Projects",
-    "Experience": "Experience",
-    "About": "About me",
-    "Contact": "Contact"
+  "Contact": {
+    "Email": "Email *",
+    "Location": "Madrid, Spain",
+    "Message": "Message *",
+    "Name": "Name *",
+    "SendEmail": "Send email",
+    "Subtitle": "Drop your info and lets talk about cool projects. My inbox is open for all!",
+    "Thanks": "Thank you for contacting me, I will try to answer you as soon as possible",
+    "Title": "Lets Chat!"
   },
-  "Intro": {
-    "ResumeLink": "See my resume",
-    "Hello": "Hi there, I am George",
-    "Description": "I am a Software Engineer with {{ years }} years of full-stack experience with Django and React, with the ability to develop web systems and android applications. I enjoy working as a team, I am self-motivated and proactive. I am fast learner, strong reasoning, problem solving skills, and skilled in creating clean, proven, and efficient code."
+  "Education": {
+    "Dates": "September 2017 - December 2021",
+    "Rol": "Software Engineer",
+    "Title": "Education",
+    "University": "University of Camagüey, Cuba"
   },
-  "Skills": {
-    "Title": "Proficiency",
-    "TitleDesc": "About me"
+  "Expertise": {
+    "Descktop": "Descktop",
+    "Key": "Key experiences",
+    "Mobile": "Mobile",
+    "Title": "Experience",
+    "Watch": "Watch skills"
+  },
+  "Footer": {
+    "Text": "Copyright © {{ year }} - All right reserved "
   },
   "General": {
     "Close": "Close",
     "FullStack": "Full Stack Developer",
     "WatchMore": "Watch more"
   },
-  "Education": {
-    "Title": "Education",
-    "University": "University of Camagüey, Cuba",
-    "Rol": "Software Engineer",
-    "Dates": "September 2017 - December 2021"
+  "Header": {
+    "About": "About me",
+    "Contact": "Contact",
+    "Education": "Education",
+    "Experience": "Experience",
+    "Projects": "Projects"
   },
-  "Contact": {
-    "Location": "Madrid, Spain",
-    "SendEmail": "Send email",
-    "Title": "Lets Chat!",
-    "Subtitle": "Drop your info and lets talk about cool projects. My inbox is open for all!",
-    "Name": "Name *",
-    "Email": "Email *",
-    "Message": "Message *",
-    "Thanks": "Thank you for contacting me, I will try to answer you as soon as possible"
-  },
-  "Validations": {
-    "Required": "Field required",
-    "InvalidEmail": "Invalid Email"
-  },
-  "Expertise": {
-    "Title": "Experience",
-    "Watch": "Watch skills",
-    "Mobile": "Mobile",
-    "Descktop": "Descktop",
-    "Key": "Key experiences"
+  "Intro": {
+    "Description": "I am a Software Engineer with {{ years }} years of full-stack experience with Django and React, with the ability to develop web systems and android applications. I enjoy working as a team, I am self-motivated and proactive. I am fast learner, strong reasoning, problem solving skills, and skilled in creating clean, proven, and efficient code.",
+    "Hello": "Hi there, I am George",
+    "ResumeLink": "See my resume"
   },
   "Projects": {
-    "Title": "Big Projects",
     "SourceCode": "Source code",
+    "Title": "Big Projects",
     "VisitWebsite": "Visit website",
     "WatchImages": "Watch images"
   },
-  "Footer": {
-    "Text": "Copyright © {{ year }} - All right reserved "
+  "Skills": {
+    "Title": "Proficiency",
+    "TitleDesc": "About me"
+  },
+  "Validations": {
+    "InvalidEmail": "Invalid Email",
+    "Required": "Field required"
   }
 }
