@@ -25,9 +25,12 @@ export const IntroductionContent: React.FC<{ socialMedias: SocialMedia[] }> = ({
         </div>
 
         {/* Description */}
-        <p className={classes.description_message}>
-          {t('Intro.Description', { years: fullYears })}
-        </p>
+        <p
+          className={classes.description_message}
+          dangerouslySetInnerHTML={{
+            __html: t('Intro.Description', { years: fullYears })
+          }}
+        />
 
         {/* Social Media */}
         <div className={classes.social_media}>

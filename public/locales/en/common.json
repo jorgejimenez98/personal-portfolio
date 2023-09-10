@@ -38,7 +38,7 @@
     "Projects": "Projects"
   },
   "Intro": {
-    "Description": "I am a Software Engineer with {{ years }} years of full-stack experience with Django and React, with the ability to develop web systems and android applications. I enjoy working as a team, I am self-motivated and proactive. I am fast learner, strong reasoning, problem solving skills, and skilled in creating clean, proven, and efficient code.",
+    "Description": "I am a Software Engineer with <strong>{{ years }} years</strong> of full-stack experience with <strong>Django</strong> and <strong>React</strong>, with the ability to develop web systems and android applications. I enjoy working as a team, I am self-motivated and proactive. I am fast learner, strong reasoning, problem solving skills, and skilled in creating clean, proven, and efficient code.",
     "Hello": "Hi there, I am George",
     "ResumeLink": "See my resume"
   },

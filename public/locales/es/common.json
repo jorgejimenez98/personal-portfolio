@@ -38,7 +38,7 @@
     "Projects": "Proyectos"
   },
   "Intro": {
-    "Description": "Soy Ingeniero de Software con {{ years }} años de experiencia full-stack con Django y React, con capacidad para desarrollar sistemas web y aplicaciones android(Java). Me gusta trabajar en equipo, soy proactivo y motivado, aprendo rápido, tengo un razonamiento sólido, habilidades para resolver problemas y estoy capacitado para crear código limpio, probado y eficiente.",
+    "Description": "Soy Ingeniero de Software con <strong>{{ years }} años</strong> de experiencia full-stack con <strong>Django</strong> y <strong>React</strong>, con capacidad para desarrollar sistemas web y aplicaciones android(Java). Me gusta trabajar en equipo, soy proactivo y motivado, aprendo rápido, tengo un razonamiento sólido, habilidades para resolver problemas y estoy capacitado para crear código limpio, probado y eficiente.",
     "Hello": "Hola mundo, soy Jorge",
     "ResumeLink": "Ver mi CV"
   },
