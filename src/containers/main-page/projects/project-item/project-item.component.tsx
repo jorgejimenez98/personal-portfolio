@@ -77,11 +77,13 @@ export const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
       </div>
     </div>
 
-    <Modal
-      isVisible={isModalVisible}
-      handleClose={() => setIsModalVisible(false)}
-    >
-      <Gallery imageUrls={project.images} />
-    </Modal>
+    {isModalVisible && (
+      <Modal
+        isVisible={isModalVisible}
+        handleClose={() => setIsModalVisible(false)}
+      >
+        <Gallery imageUrls={project.images} />
+      </Modal>
+    )}
   </>
 }
