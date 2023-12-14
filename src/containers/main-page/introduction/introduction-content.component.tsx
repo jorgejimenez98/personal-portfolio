@@ -56,7 +56,7 @@ export const IntroductionContent: React.FC<{ socialMedias: SocialMedia[] }> = ({
             width={550}
             height={550}
             className={classes.image_mask}
-            alt='main-image'
+            alt='Jorge Jimenez Diaz'
           />
         </div>
       </Fragment>

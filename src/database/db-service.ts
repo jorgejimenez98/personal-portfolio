@@ -18,7 +18,7 @@ class MongoDbService {
       await db.connect()
     } else if (type === 'DISCONNECT') {
       // await db.disconnect()
-
+      // Esto es un fix temporal, MongoDb y Nextjs tienen un issue en comun
       console.log('Disconnected')
     }
   }
@@ -53,7 +53,13 @@ class MongoDbService {
       this.getProjects()
     ])
     await this.process('DISCONNECT')
-    return { socialMedias, mainSkills, descriptions, expertises, projects }
+    return {
+      socialMedias,
+      mainSkills,
+      descriptions,
+      expertises: expertises.reverse(),
+      projects: projects.reverse()
+    }
   }
 }
 

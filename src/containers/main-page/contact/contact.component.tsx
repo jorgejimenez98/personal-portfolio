@@ -6,13 +6,15 @@ import { ContactForm } from '@/forms'
 import { SocialMedia } from '@/types'
 import { SocialMediaAccounts } from '@/containers'
 import { TwoColumnLayout } from '@/layouts'
-import { CustomLogo } from '@/components'
+import { CustomLogo, InvisibleLink } from '@/components'
 import { header_ids } from '@/lib/constants'
 
 export const Contact: React.FC<{ socialMedias: SocialMedia[] }> = ({ socialMedias }) => {
   const { t } = useTranslation()
 
-  return (
+  return <>
+    <InvisibleLink id={header_ids.contact} />
+
     <div id={header_ids.contact}>
       <div className={classes.divider}/>
 
@@ -52,5 +54,5 @@ export const Contact: React.FC<{ socialMedias: SocialMedia[] }> = ({ socialMedia
         <ContactForm />
       </TwoColumnLayout>
     </div>
-  )
+  </>
 }

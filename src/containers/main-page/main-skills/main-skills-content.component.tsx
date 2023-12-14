@@ -4,6 +4,7 @@ import { TwoColumnLayout } from '@/layouts'
 import { useTranslation } from 'next-i18next'
 import { global_classes, header_ids } from '@/lib/constants'
 import { classes } from './main-skills.classes'
+import { InvisibleLink } from '@/components'
 
 interface MainSkillsContentProps {
   mainSkills: MainSkill[]
@@ -13,8 +14,9 @@ interface MainSkillsContentProps {
 export const MainSkillsContent: React.FC<MainSkillsContentProps> = ({ mainSkills, descriptions }) => {
   const { t, i18n: { language } } = useTranslation()
 
-  return (
-    <div id={header_ids.about_me}>
+  return <>
+    <InvisibleLink id={header_ids.about_me} />
+    <div>
       <TwoColumnLayout>
         {/* Main Skills */}
         <Fragment>
@@ -58,5 +60,5 @@ export const MainSkillsContent: React.FC<MainSkillsContentProps> = ({ mainSkills
         </div>
       </TwoColumnLayout>
     </div>
-  )
+  </>
 }

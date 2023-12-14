@@ -5,13 +5,14 @@ import { global_classes, header_ids } from '@/lib/constants'
 import { ListLayout } from '@/layouts'
 import { Project } from '@/types'
 import { ProjectItem } from './project-item/project-item.component'
-
+import { InvisibleLink } from '@/components'
 
 export const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
   const { t } = useTranslation()
 
-  return (
-    <div id={header_ids.projects}>
+  return <>
+    <InvisibleLink  id={header_ids.projects}/>
+    <div>
       {/* Title */}
       <h1 className={global_classes.left_big_text}>
         {t('Projects.Title')}
@@ -24,5 +25,5 @@ export const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
         ))}
       </ListLayout>
     </div>
-  )
+  </>
 }

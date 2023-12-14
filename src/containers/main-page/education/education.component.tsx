@@ -5,15 +5,15 @@ import { useTranslation } from 'next-i18next'
 
 import { classes } from './education.classes'
 import { header_ids, images, urls } from '@/lib/constants'
+import { InvisibleLink } from '@/components'
 
 export const Education: React.FC = () => {
   const { t } = useTranslation()
 
-  return (
-    <div
-      className={classes.content}
-      id={header_ids.education}
-    >
+  return <>
+    <InvisibleLink id={header_ids.education} />
+
+    <div className={classes.content}>
       <h1 className={classes.education_title}>
         {t('Education.Title')}
       </h1>
@@ -64,5 +64,5 @@ export const Education: React.FC = () => {
         </div>
       </div>
     </div>
-  )
+  </>
 }

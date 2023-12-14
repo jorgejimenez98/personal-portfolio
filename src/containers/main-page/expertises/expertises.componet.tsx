@@ -5,12 +5,15 @@ import { global_classes, header_ids } from '@/lib/constants'
 import { Expertise } from '@/types'
 import { ExpertiseItem } from './expertise/expertise-item.component'
 import { ListLayout } from '@/layouts'
+import { InvisibleLink } from '@/components'
 
 export const ExpertiseContent: React.FC<{ expertises: Expertise[] }> = ({ expertises }) => {
   const { t } = useTranslation()
 
-  return (
-    <div id={header_ids.expertise}>
+  return <>
+    <InvisibleLink id={header_ids.expertise} />
+
+    <div>
       {/* Title */}
       <h1 className={global_classes.left_big_text}>
         {t('Expertise.Title')}
@@ -26,6 +29,6 @@ export const ExpertiseContent: React.FC<{ expertises: Expertise[] }> = ({ expert
         ))}
       </ListLayout>
     </div>
-  )
+  </>
 }
 
