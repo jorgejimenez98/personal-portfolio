@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { db } from './db'
 import * as types from '@/types'
 import * as models from './models'
@@ -16,7 +17,9 @@ class MongoDbService {
     if (type === 'CONNECT') {
       await db.connect()
     } else if (type === 'DISCONNECT') {
-      await db.disconnect()
+      // await db.disconnect()
+
+      console.log('Disconnected')
     }
   }
 
