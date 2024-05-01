@@ -48,13 +48,20 @@ export const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
               passHref
               href={project.websiteUrl}
               target='_blank'
+              className='w-full'
             >
               <button className={classes.url_button}>
                 {project.isRepoUrl ? t('Projects.SourceCode'): t('Projects.VisitWebsite')}
               </button>
             </Link>
-          </div>
 
+            {/* Company name */}
+            <div className={classes.develop_content}>
+              <span className={classes.developed}>
+                {t('Projects.Developed', { companyName: project.companyName })}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

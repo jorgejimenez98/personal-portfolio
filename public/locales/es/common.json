@@ -46,7 +46,8 @@
     "SourceCode": "Código fuente",
     "Title": "Proyectos y startups en las que ayudé a crear sus aplicaciones",
     "VisitWebsite": "Visitar web",
-    "WatchImages": "Ver imágenes"
+    "WatchImages": "Ver imágenes",
+    "Developed": "Desarrollado en {{ companyName }}"
   },
   "Skills": {
     "Title": "Nivel de Exp.",

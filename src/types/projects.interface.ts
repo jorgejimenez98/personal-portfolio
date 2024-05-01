@@ -6,5 +6,5 @@ export interface Project {
   description_es: string
   isRepoUrl: boolean
   websiteUrl: string
-  images: string[]
+  companyName: string
 }
