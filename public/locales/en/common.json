@@ -46,7 +46,8 @@
     "SourceCode": "Source code",
     "Title": "Projects and startups in which I helped create their applications",
     "VisitWebsite": "Visit website",
-    "WatchImages": "Watch images"
+    "WatchImages": "Watch images",
+    "Developed": "Developed in {{ companyName }}"
   },
   "Skills": {
     "Title": "Proficiency",
