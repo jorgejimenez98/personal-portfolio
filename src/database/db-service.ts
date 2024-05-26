@@ -53,12 +53,13 @@ class MongoDbService {
       this.getProjects()
     ])
     await this.process('DISCONNECT')
+
     return {
       socialMedias,
       mainSkills,
       descriptions,
-      expertises: expertises.reverse(),
-      projects: projects.reverse()
+      projects,
+      expertises
     }
   }
 }
