@@ -24,6 +24,14 @@ export const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
           <ProjectItem project={project} key={idx} />
         ))}
       </ListLayout>
+
+      {/* Other Projects */}
+      <p
+        className='text-center lg:text-start mt-4'
+        dangerouslySetInnerHTML={{
+          __html: t('Projects.More')
+        }}
+      />
     </div>
   </>
 }
