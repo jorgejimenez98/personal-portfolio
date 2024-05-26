@@ -56,6 +56,7 @@ export const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
             </Link>
 
             {/* Company name */}
+
             <div className={classes.develop_content}>
               <span className={classes.developed}>
                 {t('Projects.Developed', { companyName: project.companyName })}

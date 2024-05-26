@@ -3,7 +3,7 @@ export const classes = {
   description_message: 'mt-5 text-xl text-center opacity-70 lg:text-start lg:mt-10 lg:text-3xl',
   hello_message: 'mr-5 text-4xl text-center font-bold lg:text-7xl lg:text-start lg:mt-16',
   image_container: 'flex justify-center',
-  image_mask: 'mask mask-squircle shadow-md',
+  image_mask: 'mask mask-squircle img-shadow',
   intro_content: 'flex w-full bg-blend-color -mt-8',
   link_button: 'btn btn-primary',
   resume_container: 'flex mt-5 mb-5 justify-center lg:justify-start',
