@@ -32,10 +32,6 @@ export const IntroductionContent: React.FC<{ socialMedias: SocialMedia[] }> = ({
           }}
         />
 
-        {/* Social Media */}
-        <div className={classes.social_media}>
-          <SocialMediaAccounts socialMedias={socialMedias} />
-        </div>
 
         {/* Resume */}
         <div className={classes.resume_container}>
@@ -44,6 +40,11 @@ export const IntroductionContent: React.FC<{ socialMedias: SocialMedia[] }> = ({
               {t('Intro.ResumeLink')}
             </button>
           </Link>
+        </div>
+
+        {/* Social Media */}
+        <div className={classes.social_media}>
+          <SocialMediaAccounts socialMedias={socialMedias} />
         </div>
 
       </Fragment>

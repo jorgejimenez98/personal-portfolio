@@ -8,7 +8,8 @@ const nextConfig = {
     domains: [
       'flagsapi.com',
       'media.tenor.com',
-      'firebasestorage.googleapis.com'
+      'firebasestorage.googleapis.com',
+      'drive.google.com'
     ],
   },
   env: {
