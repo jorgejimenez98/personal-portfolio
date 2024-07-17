@@ -58,7 +58,7 @@ class MongoDbService {
       socialMedias,
       mainSkills,
       descriptions,
-      projects,
+      projects: projects.reverse(),
       expertises
     }
   }

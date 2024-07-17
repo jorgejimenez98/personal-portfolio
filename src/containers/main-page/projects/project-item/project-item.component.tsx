@@ -54,14 +54,6 @@ export const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
                 {project.isRepoUrl ? t('Projects.SourceCode'): t('Projects.VisitWebsite')}
               </button>
             </Link>
-
-            {/* Company name */}
-
-            <div className={classes.develop_content}>
-              <span className={classes.developed}>
-                {t('Projects.Developed', { companyName: project.companyName })}
-              </span>
-            </div>
           </div>
         </div>
       </div>
