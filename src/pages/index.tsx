@@ -11,7 +11,7 @@ import { MainPageProps } from '@/types'
 const HomePage: NextPage<MainPageProps> = (props)  => {
 
   return <>
-    <CustomSeo title={'Jorge Jimenez Diaz'} />
+    <CustomSeo title={'Jorge Jimenez'} />
     <MainPageContent {...props} />
   </>
 }
