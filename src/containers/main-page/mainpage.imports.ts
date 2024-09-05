@@ -1,3 +1,4 @@
+export { SkillsSection } from './skills/skills.component'
 export { Projects } from './projects/projects.component'
 export { Education } from './education/education.component'
 export { ExpertiseContent } from './expertises/expertises.componet'

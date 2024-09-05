@@ -1,4 +1,15 @@
 {
+  "MainSkills": {
+    "Phrase": "En el mundo de la programación, cada error es una lección, cada característica un desafío y cada día una nueva oportunidad para crecer. ¡Sigue codificando, sigue aprendiendo! 🚀",
+    "State": "Gestores de estado",
+    "Others": "Muchos otros...",
+    "Libraries": "Librerías",
+    "Title": "Habilidades profesionales",
+    "Styles": "Estilos",
+    "Languages": "Lenguajes",
+    "Databases": "Bases de datos",
+    "Microservices": "Microservicios"
+  },
   "Contact": {
     "Email": "Correo *",
     "Location": "Madrid, España",

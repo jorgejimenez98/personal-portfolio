@@ -1,4 +1,15 @@
 {
+  "MainSkills": {
+    "Phrase": "In the world of programming, every bug is a lesson, every feature a challenge, and every day a new opportunity to grow. Keep coding, keep learning! 🚀",
+    "State": "State Management",
+    "Others": "Many others...",
+    "Libraries": "Libraries",
+    "Title": "Professional Skills",
+    "Styles": "Styles",
+    "Languages": "Languages",
+    "Databases": "Databases",
+    "Microservices": "Microservices"
+  },
   "Contact": {
     "Email": "Email *",
     "Location": "Madrid, Spain",
