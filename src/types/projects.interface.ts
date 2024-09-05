@@ -7,4 +7,5 @@ export interface Project {
   isRepoUrl: boolean
   websiteUrl: string
   companyName: string
+  isLandingPage: boolean
 }

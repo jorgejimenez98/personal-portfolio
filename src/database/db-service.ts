@@ -59,7 +59,7 @@ class MongoDbService {
       mainSkills,
       descriptions,
       projects: projects.reverse(),
-      expertises
+      expertises: expertises.reverse()
     }
   }
 }

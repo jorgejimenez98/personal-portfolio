@@ -44,11 +44,12 @@
   },
   "Projects": {
     "SourceCode": "Código fuente",
+    "Title2": "Landing Pages creadas para pequeñas empresas clientes",
     "Title": "Proyectos y startups en las que ayudé a crear sus aplicaciones",
     "VisitWebsite": "Visitar web",
     "WatchImages": "Ver imágenes",
     "Developed": "Desarrollado en {{ companyName }}",
-    "More": "¿Interesado en ver más proyectos? Haz clic <strong><a class='custom-link' href='https://github.com/jorgejimenez98?page=1&tab=repositories' target='_blank'>aquí</a></strong> para explorar una humilde gama proyectos de estudios y trabajos destacados a lo largo de los años."
+    "More": "Muchos proyectos frontend, apis y microservicios no son visibles por terminos de confidencialidad, pero...<br/> ¿Interesado en ver más proyectos? Haz clic <strong><a class='custom-link' href='https://github.com/jorgejimenez98?page=1&tab=repositories' target='_blank'>aquí</a></strong> para explorar una humilde gama proyectos de estudios y trabajos destacados a lo largo de los años."
   },
   "Skills": {
     "Title": "Nivel de Exp.",
