@@ -12,7 +12,7 @@
   },
   "Contact": {
     "Email": "Correo *",
-    "Location": "Madrid, España",
+    "Location": "Miami, FL",
     "Message": "Mensaje *",
     "Name": "Nombre *",
     "SendEmail": "Enviar correo",
@@ -37,6 +37,8 @@
     "Text": "Copyright © {{ year }} - Todos los derechos reservados"
   },
   "General": {
+    "Small": "Jj",
+    "Name": "Jorge Jimenez",
     "Close": "Cerrar",
     "FullStack": "Desarrollador Full Stack",
     "WatchMore": "Ver más"

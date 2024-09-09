@@ -9,6 +9,7 @@ import ChangeLanguage from '@/components/ChangeLanguage/change-language.componen
 import { CustomLogo } from '@/components/CustomLogo/custom-logo.component'
 import { HeaderItemList } from './HeaderItems/header-items.component'
 import styles from './header.module.scss'
+import { useTranslation } from 'next-i18next'
 
 const ChangeTheme = dynamic(() => import('@/components/ChangeTheme/change-theme.component'), {
   ssr: false
@@ -16,6 +17,7 @@ const ChangeTheme = dynamic(() => import('@/components/ChangeTheme/change-theme.
 
 export const TheHeader: React.FC = () => {
   const { isMobile } = useWindowSize()
+  const { t } = useTranslation()
 
   return (
     <nav className={`navbar ${styles.header}`}>
@@ -36,7 +38,7 @@ export const TheHeader: React.FC = () => {
           </ul>
         </div>
         <Link href={'/'}>
-          <CustomLogo text={!isMobile ? 'Jorge Jimenez' : 'Jj'} />
+          <CustomLogo text={!isMobile ? t('General.Name') : t('General.Small')} />
         </Link>
       </div>
       <div className='navbar-end'>

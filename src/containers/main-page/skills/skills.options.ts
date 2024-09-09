@@ -10,7 +10,7 @@ export const skills = (t: TFunction) => {
     {
       title: 'Backend',
       icon: 'fa-server',
-      skills: ['Node.js', 'Django', 'Nestjs', 'Express.js', 'Flask', t('MainSkills.Microservices'), 'Solr', 'POO'],
+      skills: ['Node.js', 'Django', 'Nestjs', 'Express.js', t('MainSkills.Microservices'), 'Solr', 'POO'],
     },
     {
       title: 'Mobile',

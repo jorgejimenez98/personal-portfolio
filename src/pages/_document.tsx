@@ -23,7 +23,7 @@ export default function MyDocument({ language, theme }: DocumentProps) {
         <link rel='icon' href='/favicon.ico' />
 
         {/* Page Title and Description */}
-        <meta name='title' content='Jorge Jimenez' />
+        <meta name='title' content='George Jimenez' />
         <meta name='description' content={labels.web_description} />
 
         {/* Keywords for SEO */}
@@ -33,14 +33,14 @@ export default function MyDocument({ language, theme }: DocumentProps) {
         <meta property='og:type' content='website' />
         <meta property='og:locale' content='en_US' />
         <meta property='og:url' content='https://www.jorgejimenez.dev/' />
-        <meta property='og:title' content='Jorge Jimenez' />
-        <meta property='og:site_name' content='Jorge Jimenez' />
+        <meta property='og:title' content='George Jimenez' />
+        <meta property='og:site_name' content='George Jimenez' />
         <meta property='og:image' content={images.small_profile} />
         <meta property='og:description' content={labels.web_description} />
 
         {/* Twitter Card tags */}
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='Jorge Jimenez' />
+        <meta name='twitter:title' content='George Jimenez' />
         <meta name='twitter:description' content={labels.web_description} />
         <meta name='twitter:image' content={images.small_profile} />
 

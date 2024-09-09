@@ -38,7 +38,7 @@ export const SkillsSection: React.FC = () => {
                   {category.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className='badge badge-ghost dark:badge-info'
+                      className='badge badge-ghost'
                     >
                       {skill}
                     </span>
