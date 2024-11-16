@@ -25,7 +25,7 @@ export const ExpertiseItem: React.FC<{ expertise: Expertise }> = ({ expertise })
   ]
 
   return (
-    <div className={classes.content}>
+    <div>
       <div className={classes.rounded_card}>
         {/* Header */}
         <div

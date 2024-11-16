@@ -15,7 +15,7 @@ export const Collapse: React.FC<CollapseProps> = ({ children, title, className }
         collapse-arrow ${className || ''}
       `}
     >
-      <input type='checkbox' />
+      <input type='checkbox'/>
       <div className='collapse-title text-xl font-medium opacity-70'>
         {title}
       </div>

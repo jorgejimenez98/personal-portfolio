@@ -4,7 +4,6 @@ import { useTranslation } from 'next-i18next'
 import { global_classes, header_ids } from '@/lib/constants'
 import { Expertise } from '@/types'
 import { ExpertiseItem } from './expertise/expertise-item.component'
-import { ListLayout } from '@/layouts'
 import { InvisibleLink } from '@/components'
 
 export const ExpertiseContent: React.FC<{ expertises: Expertise[] }> = ({ expertises }) => {
@@ -20,14 +19,14 @@ export const ExpertiseContent: React.FC<{ expertises: Expertise[] }> = ({ expert
       </h1>
 
       {/* List */}
-      <ListLayout>
+      <div className='grid grid-cols-1 sm:grid-cols-2 gap-10 mt-5'>
         {expertises.map((expertise, idx) => (
           <ExpertiseItem
             expertise={expertise}
             key={idx}
           />
         ))}
-      </ListLayout>
+      </div>
     </div>
   </>
 }

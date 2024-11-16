@@ -15,7 +15,7 @@ export const skills = (t: TFunction) => {
     {
       title: 'Mobile',
       icon: 'fa-mobile',
-      skills: ['React Native', 'Android (Java)'],
+      skills: ['React Native', 'Expo', 'Android (Java)'],
     },
     {
       title: t('MainSkills.Databases'),

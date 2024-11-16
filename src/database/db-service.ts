@@ -3,6 +3,7 @@ import { db } from './db'
 import * as types from '@/types'
 import * as models from './models'
 import mongoose from 'mongoose'
+import { getSortedExpertises } from '@/lib/utils'
 
 class MongoDbService {
 
@@ -59,7 +60,7 @@ class MongoDbService {
       mainSkills,
       descriptions,
       projects: projects.reverse(),
-      expertises: expertises.reverse()
+      expertises: getSortedExpertises(expertises)
     }
   }
 }

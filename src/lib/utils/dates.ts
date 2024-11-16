@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import { i18n } from 'next-i18next'
 import { capitalize } from './strings'
+import { Expertise } from '@/types'
 
 
 const getDateFromString = (date: string): Date => {
@@ -63,4 +64,18 @@ export const getYearMonthDifference = (dateStart: string, dateEnd: string): stri
   }
 
   return result
+}
+
+export const getSortedExpertises = (expertises: Expertise[]) => {
+  const convertToDate = (dateStr: string): Date => {
+    const [day, month, year] = dateStr.split('-').map(num => parseInt(num, 10))
+    return new Date(year, month - 1, day)
+  }
+
+  return expertises.sort((a, b) => {
+    const dateA = a.dateEnd === 'PRESENT' ? new Date() : convertToDate(a.dateEnd)
+    const dateB = b.dateEnd === 'PRESENT' ? new Date() : convertToDate(b.dateEnd)
+
+    return dateB.getTime() - dateA.getTime()
+  })
 }
