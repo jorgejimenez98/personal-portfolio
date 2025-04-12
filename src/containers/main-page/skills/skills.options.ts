@@ -5,7 +5,7 @@ export const skills = (t: TFunction) => {
     {
       title: 'Frontend',
       icon: 'fa-globe',
-      skills: ['React', 'Vue', 'Angular', 'Next.js', 'Nuxtjs', 'Html', 'Vite', 'RestAPI', 'Module Federation', 'Webpack'],
+      skills: ['React', 'Vue', 'Angular', 'Next.js', 'Nuxtjs', 'Gatsby', 'Html', 'Vite', 'RestAPI', 'Module Federation', 'Webpack'],
     },
     {
       title: 'Backend',
@@ -35,12 +35,12 @@ export const skills = (t: TFunction) => {
     {
       title: t('MainSkills.Styles'),
       icon: 'fa-palette',
-      skills: ['CSS', 'SCSS', 'TailwindCSS', 'PostCSS', 'MaterialUI', 'AntDesign', 'ChakraUI', 'Bootstrap', 'Shadcn UI'],
+      skills: ['CSS', 'SCSS', 'TailwindCSS', 'PostCSS', 'MaterialUI', 'AntDesign', 'ChakraUI', 'Bootstrap', 'Shadcn UI', 'Daisy UI'],
     },
     {
       title: t('MainSkills.Libraries'),
       icon: 'fa-book',
-      skills: ['Puppetter', 'Antd-Plots', 'RTK-Query', 'TanStank Query', 'Solr', 'Axios', 'Formik', 'Vee-Validate', t('MainSkills.Others')],
+      skills: ['Puppetter', 'Antd-Plots', 'RTK-Query', 'TanStank Query', 'Solr', 'Axios', 'Formik', 'React-hook-form', 'Vee-Validate', t('MainSkills.Others')],
     },
     {
       title: 'Testing',

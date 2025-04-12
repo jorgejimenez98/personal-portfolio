@@ -19,7 +19,7 @@ export const ExpertiseContent: React.FC<{ expertises: Expertise[] }> = ({ expert
       </h1>
 
       {/* List */}
-      <div className='grid grid-cols-1 sm:grid-cols-2 gap-10 mt-5'>
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-10 mt-5'>
         {expertises.map((expertise, idx) => (
           <ExpertiseItem
             expertise={expertise}

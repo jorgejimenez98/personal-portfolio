@@ -47,7 +47,6 @@ export const ExpertiseItem: React.FC<{ expertise: Expertise }> = ({ expertise })
               </h3>
             </Link>
 
-
             {/* Logo */}
             <div className={classes.logo_content}>
               <Image
@@ -95,8 +94,12 @@ export const ExpertiseItem: React.FC<{ expertise: Expertise }> = ({ expertise })
           <p className={classes.description_mobile}>
             {expertiseDescription}
           </p>
+
           {skills.map((skill, idx) => (
-            <SkillItems key={idx} {...skill} />
+            <SkillItems
+              key={idx}
+              {...skill}
+            />
           ))}
         </Collapse>
       </div>
